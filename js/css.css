@@ -1,0 +1,46 @@
+#header{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 24px;
+    background: #f4f4f4;
+   /* background: rgba(50, 113, 179, 0.17);*/
+}
+#header a{
+	font-family: 'Microsoft Yahei', sans-serif;
+	text-decoration: none;
+	background: transparent;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 24px;
+	margin: 0 10px 0 10px;
+	color: #000000;
+}
+body { font:normal 15px Tahoma, Simsun; margin:0; padding:25px 0 0;vertical-align:baseline; background:#fff;  background-color: rgba(0,0,0,.005);    } 
+h1 { font:bold 28px "微软雅黑", tahoma; margin:0 0 10px; } 
+a:link {color: #000000;text-decoration:none;} /* 未访问的链接 */
+a:visited {color: #000000;text-decoration:none;} /* 已访问的链接 */
+a:hover {color: #FF99FF;text-decoration:none;} /* 鼠标移动到链接上 */
+a:active {color: #3300FF;text-decoration:none;} /* 选定的链接 */
+a,li{ list-style-type:none; text-decoration:none;}
+p,ul,li{ margin:2px;}
+p{ margin-left:00px;}
+.child{ display:none;}
+.mrt{ max-width:15px;   onerror="this.src='/favicon.ico;this.onerror=null';display: inline-block;"}
+.header, .links, .footer { width:700px; margin:15px auto; padding:2px; text-align:center; }
+.search { width:700px; margin:15px auto; padding:8px 4px; text-align:center; background:#f8f8f8; border:2px solid #f2f2f2; ext-align:center; }
+.search form { width:485px; margin:0 auto; }
+.i { font-size:16px; font-family:Tahoma; width:70%; height:24px; line-height:24px; padding:3px 6px; margin-right:2px; background:#fff url(img/search_bg.png) no-repeat; border:1px solid #b6b6b6; border-color:#7b7b7b #b6b6b6 #b6b6b6 #7b7b7b; display:inline-block; }
+.btn_wr { width:97px; height:34px; vertical-align:top; _padding-top:1px; background:url(img/search_bg.png) no-repeat -202px bottom; display:inline-block; } 
+.btn { font:normal 14px Tahoma; width:95px; height:32px; padding:0; background:#ddd url(img/search_bg.png) no-repeat 0 -35px; cursor:pointer; border:0; } 
+.btn_h { background-position:-100px -35px; }
+.description { font-size:15px; color:#888; margin:0; }/* 无标签字体 */
+.center { text-align:center; font-weight:bold; } .center a { color:#ff3300; } 
+.shuqian{margin:0 auto;width:60%;height:500px;border:0px solid #000}  
+.yb1{float: right;}
+.content {	text-align: center;	position: relative;	top: 250px;	background: #fff;} /* 水平居中*/
+.zb{ float:right; height:100%; weight:3%; OVERFLOW: auto; background-color:#f2f2f2; background: rgba(0, 0, 0, 0，5); }
+.yb{ float:right; height:100%; width:97%;	 OVERFLOW: auto; background-color:#f2f2f8; }
+.con{ min-height: 100vh; width:100%;	 }
