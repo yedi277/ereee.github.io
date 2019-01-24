@@ -18,7 +18,7 @@
 	margin: 0 10px 0 10px;
 	color: #000000;
 }
-body { font:normal 15px Tahoma, Simsun; margin:0; padding:25px 0 0;vertical-align:baseline; background:#fff;  background-color: rgba(0,0,0,.005);    } 
+body { font:normal 15px Tahoma, Simsun; margin:0; padding:25px 0 0;vertical-align:baseline; background:#fff;  background-color: rgba(0,0,0,.005);} 
 h1 { font:bold 28px "微软雅黑", tahoma; margin:0 0 10px; } 
 a:link {color: #000000;text-decoration:none;} /* 未访问的链接 */
 a:visited {color: #000000;text-decoration:none;} /* 已访问的链接 */
@@ -38,10 +38,11 @@ p{ margin-left:00px;}
 .btn_h { background-position:-100px -35px; }
 .description { font-size:15px; color:#888; margin:0; }/* 无标签字体 */
 .center { text-align:center; font-weight:bold; } .center a { color:#ff3300; } 
-.shuqian{margin:0 auto;width:60%;height:500px;border:0px solid #000}  
-.shuqian2{margin:0 auto;width:100%;height:400px;border:0px solid #000}  
+.shuqian{margin:0 auto;width:60%;height:450px;border:0px solid #000}  
+.shuqian2{margin:0 auto;width:100%;height:400px;border:0px}  
 .yb1{float: right;}
 .content {	text-align: center;	position: relative;	top: 250px;	background: #fff;} /* 水平居中*/
 .zb{ float:right; height:100%; weight:3%; OVERFLOW: auto; background-color:#f2f2f2; background: rgba(0, 0, 0, 0，5); }
 .yb{ float:right; height:100%; width:97%;	 OVERFLOW: auto; background-color:#f2f2f8; }
-.con{ min-height: 100vh; width:100%;	 }
+.con{ min-height: 96vh; width:100%;	 }
+.sq{ min-height: 50vh; width:100%;	 }
