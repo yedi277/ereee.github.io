@@ -6,13 +6,13 @@ for (var i = 0; i < mobileAgent.length; i++) {
 	if (browser.indexOf(mobileAgent[i]) != -1) {
 	isMobile = true;
 	location.href = 'http://ereee.cc/index.htm';
-	break;}}//识别标签跳转 
+	break;}}//识别手机标签跳转 
 
 var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
 var browser = navigator.userAgent.toLowerCase();
 var isMobile = false;
 for (var i=0; i<mobileAgent.length; i++){ 
-if (browser.indexOf(mobileAgent[i])!=-1){ isMobile = true;location.href = '/wap/';break; } }//识别标签跳转
+if (browser.indexOf(mobileAgent[i])!=-1){ isMobile = true;location.href = 'http://ereee.cc/index4.html';break; } }//识别手机标签跳转2
 -->
 
 	
