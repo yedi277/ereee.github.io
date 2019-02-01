@@ -27,6 +27,7 @@ a:active {color: #3300FF;text-decoration:none;} /* 选定的链接 */
 a,li{ list-style-type:none; text-decoration:none;}
 p,ul,li{ margin:2px;}
 p{ margin-left:00px;}
+img{border:0 none;} /* a标签 图片边框 */
 .child{ display:none;}
 .mrt{ max-width:15px;   onerror="this.src='/favicon.ico;this.onerror=null';display: inline-block;"}
 .header, .links, .footer { width:800px; margin:15px auto; padding:2px; text-align:center; }
