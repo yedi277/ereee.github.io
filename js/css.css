@@ -45,7 +45,18 @@ img{border:0 none;} /* a标签 图片边框 */
 .content {	text-align: center;	position: relative;	top: 250px;	background: #fff;} /* 水平居中*/
 .zb{ float:right; height:100%; weight:3%; OVERFLOW: auto; background-color:#f2f2f2; background: rgba(0, 0, 0, 0，5); }
 .yb{ float:right; height:100%; width:97%;	 OVERFLOW: auto; background-color:#f2f2f8; }
-.con{ min-height: 96vh; width:100%;	 }
+.con{ min-height: 96vh; width:100%;}
 
-.coo{ min-height: 100vh; width:100%;	 }
-.sq{ min-height: 50vh; width:100%;	 }
+.coo{ min-height: 100vh; width:100%;}
+.sq{ min-height: 50vh; width:100%;}
+
+.searchx { width:94%; margin:15px auto; padding:8px 4px; text-align:center; background:#f8f8f8; border:2px solid #f2f2f2; ext-align:center; }
+.searchc { width:92%; margin:15px auto; padding:8px 4px; text-align:center;   }
+.content1 {	   clear:both; 	top: 0px;	background: #fff;}
+.ss { font-size:16px; font-family:Tahoma; width:75%; height:5%; line-height:24px; padding:3px 6px; margin-right:2px; background:#fff url(img/search_bg.png) no-repeat; border:1px solid #b6b6b6; border-color:#7b7b7b #b6b6b6 #b6b6b6 #7b7b7b; display:inline-block; }
+.btn_ss { width:20%; height:5%; vertical-align:top; _padding-top:1px; background:#38f; display:inline-block;}
+.search { width:100%; margin:15px auto; padding:8px 0px; text-align:center; background:#f8f8f8; border:2px solid #f2f2f2; }
+.search form { width:80%; margin:0 auto; }
+.s { width:70%; height:4%;   background:url(img/search_bg.png);} 
+.x { width:20%; height:4%;   background:#38f; vertical-align:top;} 
+.mrtt{ max-width:25px;   onerror="this.src='/favicon.ico;this.onerror=null';"}
