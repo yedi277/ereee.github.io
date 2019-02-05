@@ -1,13 +1,4 @@
-var mobileAgent = new Array("iphone", "ipod", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
-var browser = navigator.userAgent.toLowerCase();
-var isMobile = false;
-for (var i = 0; i < mobileAgent.length; i++) {
-	if (browser.indexOf(mobileAgent[i]) != -1) {
-	isMobile = true;
-	location.href = 'http://ereee.cc/index5.html';
-	break;}}//识别手机标签跳转 
-
-!function(n) {
+function(n) {
     var e = n.document,
     t = e.documentElement,
     i = 640,
