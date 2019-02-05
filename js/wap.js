@@ -4,13 +4,9 @@ var isMobile = false;
 for (var i = 0; i < mobileAgent.length; i++) {
 	if (browser.indexOf(mobileAgent[i]) != -1) {
 	isMobile = false;
-	location.href = 'http://ereee.cc/index5.html';
-	break;}}//识别手机标签跳转 
-
-!function(){
-	if(/iphone|ios|android|ipod/i.test(navigator.userAgent.toLowerCase()) == false){
-		location.href = 'http://ereee.cc/';
-	}
+	location.href = 'http://ereee.cc/';
+	break;}}//识别手机标签跳转 true false
+	
 !function(n) {
     var e = n.document,
     t = e.documentElement,
