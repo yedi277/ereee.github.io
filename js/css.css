@@ -44,7 +44,8 @@ img{border:0 none;} /* a标签 图片边框 */
 .yb1{float: right;}
 .content {	text-align: center;	position: relative;	top: 250px;	background: #fff;} /* 水平居中*/
 .zb{ float:right; height:100%; weight:3%; OVERFLOW: auto; background-color:#f2f2f2; background: rgba(0, 0, 0, 0，5); }
-.yb{ float:right; height:100%; width:97%;	 OVERFLOW: auto; background-color:#f2f2f8; }
+.yb{ float:right; height:100%; width:97%; OVERFLOW: auto; background-color:#f2f2f8; }
+.max{ float:right; height:100%; width:100%; OVERFLOW: auto; }
 .con{ min-height: 96vh; width:100%;}
 
 .coo{ min-height: 100vh; width:100%;}
