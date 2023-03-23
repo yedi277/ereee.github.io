@@ -41,4 +41,13 @@ function show(id){
 	}
 }
 
-
+function ShowDetail() {
+     if (window.top.document.getElementById("rrbay_wzatool")) {
+         return false;
+     }
+    var url = "?url=" + document.location.href;
+    window.scrollTo(0, 0);
+    location_href('/canyou/index.html'  + url);
+}
+function location_href(url) { location.href = url }
+//无障碍工作条 基于iframe <a title="无障碍通道" href="javascript:;" onclick="ShowDetail()" accesskey="g" onmousedown="ShowDetail()" target="_self">进入无障碍通道</a>。
