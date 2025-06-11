@@ -1,0 +1,133 @@
+123木头人 -黑Girl.mp3
+B What U Wanna B-Darin.mp3
+Boom Clap-Charli XCX.mp3
+Bye Bye Bye-Lovestoned.mp3
+Chancenlos-Annett Louisan.mp3
+Danke-LaFee.mp3
+Die Dinge-Annett Louisan.mp3
+Du fehlst mir so-Annett Louisan.mp3
+Es Ist Ein Schnee Gefallen-Adaro.mp3
+Faded-Alan Walker.mp3
+Free To Be Me-Haroula Rose.mp3
+Für immer-Eisblume.mp3
+I Am You-Kim Taylor.mp3
+I Remember-MOCCA.mp3
+Morning-卫兰.mp3
+Oh!-少女时代.mp3
+Say Hello-Rosie Thomas;Sufjan Stevens.mp3
+Schlaflied-Kate & Ben.mp3
+Shape of You-J.Fla.mp3
+Speak Now-Taylor Swift.mp3
+Stay Here Forever-Jewel.mp3
+Sunshine Girl-moumoon.mp3
+Symphonie-Silbermond.mp3
+The Girl With the Northern Soul Collection-Club 8.mp3
+Wie geht glücklich-Sarah Connor.mp3
+Wigen Wagen-Adaro.mp3
+《极乐净土》官方中文版_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili_2.mp3
+【祖娅纳惜·FRE】阿刁_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili.mp3
+一个像夏天一个像秋天-范玮琪.mp3
+亲爱的,那不是爱情-张韶涵.mp3
+低着头-自然卷.mp3
+初恋粉色系 -南拳妈妈.mp3
+勇气-梁静茹.mp3
+卓别林-龚芝怡.mp3
+单车恋人-后弦.mp3
+喜欢-张悬.mp3
+喜欢你-G.E.M.邓紫棋.mp3
+坐在巷口的那对男女-自然卷.mp3
+宝贝-张悬.mp3
+小半-陈粒.mp3
+小手拉大手-梁静茹.mp3
+山楂树之恋-程佳佳.mp3
+平凡之路-朴树.mp3
+恋愛サーキュレーション-花澤香菜.mp3
+情歌-梁静茹.mp3
+故梦-双笙.mp3
+有点甜-汪苏泷;By2.mp3
+梁山伯与茱丽叶-卓文萱;曹格.mp3
+爱久见人心-梁静茹.mp3
+狠狠哭-郭采洁.mp3
+童话镇-陈一发儿.mp3
+说好了不见面-小贱（谭冰尧）.mp3
+追梦赤子心-Gala.mp3
+遇见-孙燕姿.mp3
+遗失的美好-张韶涵.mp3
+
+
+
+
+
+id: "436514312",  // 音乐ID
+                name: "成都",  // 音乐名字
+                artist: "赵雷", // 艺术家名字
+                album: "成都",    // 专辑名字
+                source: "netease",     // 音乐来源
+                url_id: "436514312",  // 链接ID
+                pic_id: "2946691234868155",  // 封面ID
+                lyric_id: "436514312",  // 歌词ID
+                pic: "https://p3.music.126.net/34YW1QtKxJ_3YnX9ZzKhzw==/2946691234868155.jpg",    // 专辑图片
+                url: " "   // mp3链接（此项建议不填，除非你有该歌曲的比较稳定的外链）
+
+
+{ id:"",name: "勇气",artist: "梁静茹",album:"",source:"", url_id:"",pic_id:"", lyric_id:"", pic:"",url: "http://ereee.cc/music/勇气-梁静茹.mp3" },
+{ id:"",name: "卓别林",artist:"龚芝怡",album:"",source:"", url_id:"",pic_id:"", lyric_id:"", pic:",url:" http://ereee.cc/music/卓别林-龚芝怡.mp3"}
+{ id:"",name: "	卓别林	",artist:"	龚芝怡	",album:"",source:"", url_id:"",pic_id:"", lyric_id:"", pic:",url:"	 http://ereee.cc/music/卓别林-龚芝怡.mp3	"}
+
+
+http://ereee.cc/music/123木头人 -黑Girl.mp3
+http://ereee.cc/music/B What U Wanna B-Darin.mp3
+http://ereee.cc/music/Boom Clap-Charli XCX.mp3
+http://ereee.cc/music/Bye Bye Bye-Lovestoned.mp3
+http://ereee.cc/music/Chancenlos-Annett Louisan.mp3
+http://ereee.cc/music/Danke-LaFee.mp3
+http://ereee.cc/music/Die Dinge-Annett Louisan.mp3
+http://ereee.cc/music/Du fehlst mir so-Annett Louisan.mp3
+http://ereee.cc/music/Es Ist Ein Schnee Gefallen-Adaro.mp3
+http://ereee.cc/music/Faded-Alan Walker.mp3
+http://ereee.cc/music/Free To Be Me-Haroula Rose.mp3
+http://ereee.cc/music/Für immer-Eisblume.mp3
+http://ereee.cc/music/I Am You-Kim Taylor.mp3
+http://ereee.cc/music/I Remember-MOCCA.mp3
+http://ereee.cc/music/Morning-卫兰.mp3
+http://ereee.cc/music/Oh!-少女时代.mp3
+http://ereee.cc/music/Say Hello-Rosie Thomas;Sufjan Stevens.mp3
+http://ereee.cc/music/Schlaflied-Kate & Ben.mp3
+http://ereee.cc/music/Shape of You-J.Fla.mp3
+http://ereee.cc/music/Speak Now-Taylor Swift.mp3
+http://ereee.cc/music/Stay Here Forever-Jewel.mp3
+http://ereee.cc/music/Sunshine Girl-moumoon.mp3
+http://ereee.cc/music/Symphonie-Silbermond.mp3
+http://ereee.cc/music/The Girl With the Northern Soul Collection-Club 8.mp3
+http://ereee.cc/music/Wie geht glücklich-Sarah Connor.mp3
+http://ereee.cc/music/Wigen Wagen-Adaro.mp3
+http://ereee.cc/music/《极乐净土》官方中文版_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili_2.mp3
+http://ereee.cc/music/【祖娅纳惜·FRE】阿刁_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili.mp3
+http://ereee.cc/music/一个像夏天一个像秋天-范玮琪.mp3
+http://ereee.cc/music/亲爱的,那不是爱情-张韶涵.mp3
+http://ereee.cc/music/低着头-自然卷.mp3
+http://ereee.cc/music/初恋粉色系 -南拳妈妈.mp3
+http://ereee.cc/music/勇气-梁静茹.mp3
+http://ereee.cc/music/卓别林-龚芝怡.mp3
+http://ereee.cc/music/单车恋人-后弦.mp3
+http://ereee.cc/music/喜欢-张悬.mp3
+http://ereee.cc/music/喜欢你-G.E.M.邓紫棋.mp3
+http://ereee.cc/music/坐在巷口的那对男女-自然卷.mp3
+http://ereee.cc/music/宝贝-张悬.mp3
+http://ereee.cc/music/小半-陈粒.mp3
+http://ereee.cc/music/小手拉大手-梁静茹.mp3
+http://ereee.cc/music/山楂树之恋-程佳佳.mp3
+http://ereee.cc/music/平凡之路-朴树.mp3
+http://ereee.cc/music/恋愛サーキュレーション-花澤香菜.mp3
+http://ereee.cc/music/情歌-梁静茹.mp3
+http://ereee.cc/music/故梦-双笙.mp3
+http://ereee.cc/music/有点甜-汪苏泷;By2.mp3
+http://ereee.cc/music/梁山伯与茱丽叶-卓文萱;曹格.mp3
+http://ereee.cc/music/爱久见人心-梁静茹.mp3
+http://ereee.cc/music/狠狠哭-郭采洁.mp3
+http://ereee.cc/music/童话镇-陈一发儿.mp3
+http://ereee.cc/music/说好了不见面-小贱（谭冰尧）.mp3
+http://ereee.cc/music/追梦赤子心-Gala.mp3
+http://ereee.cc/music/遇见-孙燕姿.mp3
+http://ereee.cc/music/遗失的美好-张韶涵.mp3
+
