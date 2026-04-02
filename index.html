@@ -1,35 +1,88 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
+<!DOCTYPE html><html lang="zh-CN">
+<head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="description" content="个人网址导航 - 快速访问常用网站，支持搜索、分类导航">
 <meta name="keywords" content="网址导航,书签,快速导航,常用网站">
 <meta name="theme-color" content="#7a6a52">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>个人网址导航</title>
-<link rel="stylesheet" href="js/style.css">
+<title>个人网址导航</title><link rel="stylesheet" href="js/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🔗</text></svg>">
 </head>
 <body>
-<div class="top-bar"> <div class="search"> <span>🔍</span> <input type="text" id="search" placeholder="搜索网站..." autocomplete="off" aria-label="搜索网站"> </div> <div class="cat-wrap" id="catWrap"> <div class="category-bar" id="categoryBar" role="navigation" aria-label="分类导航"></div> </div> <div class="quick-links-top"> <a href="/music.html" target="_blank" rel="noopener noreferrer" title="音乐">🎵</a> <a href="/y" target="_blank" rel="noopener noreferrer" title="视频">♫</a> <a href="/pan/" target="_blank" rel="noopener noreferrer" title="网盘">📁</a> <a href="/z.html" target="_blank" rel="noopener noreferrer" title="Z">`</a> </div>
-</div>
-<header role="banner"> <h1>个人网址导航</h1> <p class="motto">我们的烦恼都是由无尽的欲望引起的，所求的越多，越会烦恼；<br>当我们无欲无求的时候，快乐会围绕在我们的身边。</p> <div class="engine-search"> <div class="engine-tabs" role="tablist"> <button class="active" data-engine="baidu" role="tab" aria-selected="true">百度</button> <button data-engine="bing" role="tab" aria-selected="false">Bing</button> <button data-engine="so" role="tab" aria-selected="false">360</button> <button data-engine="sogou" role="tab" aria-selected="false">搜狗</button> <button data-engine="google" role="tab" aria-selected="false">Google</button> <button data-engine="github" role="tab" aria-selected="false">GitHub</button> </div> <div class="engine-input"> <input type="text" id="engine-input" placeholder="输入关键词搜索..." aria-label="搜索引擎输入"> <button onclick="doSearch()" aria-label="执行搜索">Go</button> </div> </div>
-</header>
+<div class="top-bar"><div class="search"> <span>🔍</span> <input type="text" id="search" placeholder="搜索网站..." autocomplete="off" aria-label="搜索网站"></div>
+<div class="cat-wrap" id="catWrap"><div class="category-bar" id="categoryBar" role="navigation" aria-label="分类导航"></div></div>
+<div class="quick-links-top"> <a href="/music.html" target="_blank" rel="noopener noreferrer" title="音乐">🎵</a>  <a href="/y" target="_blank" rel="noopener noreferrer" title="视频">♫</a>  <a href="https://ereee.cc/pan/" target="_blank" rel="noopener noreferrer" title="网盘">📁</a>  <a href="/z.html" target="_blank" rel="noopener noreferrer" title="Z">`</a> </div></div>
+<header role="banner"> <h1>个人网址导航</h1> <p class="motto">我们的烦恼都是由无尽的欲望引起的，所求的越多，越会烦恼；<br>当我们无欲无求的时候，快乐会围绕在我们的身边。</p> <div class="engine-search"> <div class="engine-tabs" role="tablist"> <button class="active" data-engine="baidu" role="tab" aria-selected="true">百度</button> <button data-engine="bing" role="tab" aria-selected="false">Bing</button> <button data-engine="so" role="tab" aria-selected="false">360</button> <button data-engine="sogou" role="tab" aria-selected="false">搜狗</button> <button data-engine="google" role="tab" aria-selected="false">Google</button> <button data-engine="github" role="tab" aria-selected="false">GitHub</button> </div> <div class="engine-input"> <input type="text" id="engine-input" placeholder="输入关键词搜索..." aria-label="搜索引擎输入"> <button onclick="doSearch()" aria-label="执行搜索">Go</button> </div> </div></header>
 <div class="divider" onclick="toggleBookmarks()"><span>✦</span></div>
 <!-- 快捷书签 -->
-<section class="quick-links" id="quickLinks" aria-label="快捷书签"> <table class="sq-table" role="presentation"> <tr> <th scope="row">论坛:</th> <td><a href="http://bbs.mydigit.cn/" target="_blank" rel="noopener noreferrer"><img data-name="数码之家" class="ql-icon" onerror="this.style.display=\'none\'">数码之家</a></td> <td ><a href="https://www.itsk.com/" target="_blank" rel="noopener noreferrer"><img data-name="自由天空" class="ql-icon" onerror="this.style.display=\'none\'">自由天空</a></td> <td><a href="http://bbs.wuyou.net/forum.php" target="_blank" rel="noopener noreferrer"><img data-name="无忧启动" class="ql-icon" onerror="this.style.display=\'none\'">无忧启动</a></td> <td><a href="http://www.lucky8k.com/" target="_blank" rel="noopener noreferrer"><img data-name="Veket" class="ql-icon" onerror="this.style.display=\'none\'">Veket</a></td> <td><a href="http://www.pcbeta.com/" target="_blank" rel="noopener noreferrer"><img data-name="远景在线" class="ql-icon" onerror="this.style.display=\'none\'">远景在线</a></td> </tr> <tr> <th scope="row"></th> <td><a href="http://www.anywlan.com/" target="_blank" rel="noopener noreferrer"><img data-name="Anywlan" class="ql-icon" onerror="this.style.display=\'none\'">Anywlan</a></td> <td><a href="https://www.52pojie.cn/forum-16-1.html" target="_blank" rel="noopener noreferrer"><img data-name="吾爱破解" class="ql-icon" onerror="this.style.display=\'none\'">吾爱破解</a></td> <td><a href="http://www.zygx8.com/forum.php?mod=forumdisplay&fid=102" target="_blank" rel="noopener noreferrer"><img data-name="Veket" class="ql-icon" onerror="this.style.display=\'none\'">共享资源</a></td> <td><a href="https://www.kdocs.cn/latest?from=docs" target="_blank" rel="noopener noreferrer"><img data-name="金山文档" class="ql-icon" onerror="this.style.display=\'none\'">金山文档</a></td> <td></td> </tr> <tr> <th scope="row">购物:</th> <td><a href="http://www.taobao.com/" target="_blank" rel="noopener noreferrer"><img data-name="淘宝商城" class="ql-icon" onerror="this.style.display=\'none\'">淘宝商城</a></td> <td><a href="http://www.jd.com/" target="_blank" rel="noopener noreferrer"><img data-name="京东商城" class="ql-icon" onerror="this.style.display=\'none\'">京东商城</a></td> <td><a href="https://www.goofish.com/" target="_blank" rel="noopener noreferrer"><img data-name="闲鱼" class="ql-icon" onerror="this.style.display=\'none\'">闲鱼</a></td> <td><a href="https://pub.alimama.com/" target="_blank" rel="noopener noreferrer"><img data-name="淘宝联盟" class="ql-icon" onerror="this.style.display=\'none\'">淘宝联盟</a></td> <td></td> </tr> <tr> <th scope="row">WEB:</th> <td><a href="https://my.vultr.com/" target="_blank" rel="noopener noreferrer"><img data-name="Vultr VPS" class="ql-icon" onerror="this.style.display=\'none\'">Vultr VPS</a></td> <td><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer"><img data-name="阿里云" class="ql-icon" onerror="this.style.display=\'none\'">阿里云</a></td> <td><a href="https://www.ddnsto.com/app/#/devices" target="_blank" rel="noopener noreferrer"><img data-name="易有云" class="ql-icon" onerror="this.style.display=\'none\'">易有云</a></td> <td><a href="https://web.parsec.app/" target="_blank" rel="noopener noreferrer"><img data-name="Parsec" class="ql-icon" onerror="this.style.display=\'none\'">Parsec</a></td> <td><a href="http://www.wdlinux.cn/" target="_blank" rel="noopener noreferrer"><img data-name="WDlinux" class="ql-icon" onerror="this.style.display=\'none\'">WDlinux</a></td> </tr> <tr> <th scope="row"></th> <td><a href="https://github.com/" target="_blank" rel="noopener noreferrer"><img data-name="GitHub" class="ql-icon" onerror="this.style.display=\'none\'">GitHub</a></td> <td><a href="https://sunlogin.oray.com/" target="_blank" rel="noopener noreferrer"><img data-name="向日葵" class="ql-icon" onerror="this.style.display=\'none\'">向日葵</a></td> <td><a href="https://rustdesk.com/zh-cn/" target="_blank" rel="noopener noreferrer"><img data-name="RustDesk" class="ql-icon" onerror="this.style.display=\'none\'">RustDesk</a></td> <td><a href="https://my.zerotier.com/network" target="_blank" rel="noopener noreferrer"><img data-name="ZeroTier" class="ql-icon" onerror="this.style.display=\'none\'">ZeroTier</a></td> <td></td> </tr> <tr> <th scope="row">视频:</th> <td><a href="https://www.douyu.com/" target="_blank" rel="noopener noreferrer"><img data-name="斗鱼直播" class="ql-icon" onerror="this.style.display=\'none\'">斗鱼直播</a></td> <td><a href="https://www.bilibili.com/" target="_blank" rel="noopener noreferrer"><img data-name="哔哩哔哩" class="ql-icon" onerror="this.style.display=\'none\'">哔哩哔哩</a></td> <td><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img data-name="YouTube" class="ql-icon" onerror="this.style.display=\'none\'">YouTube</a></td> <td><a href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer"><img data-name="Twitch" class="ql-icon" onerror="this.style.display=\'none\'">Twitch</a></td> <td></td> </tr> <tr> <th scope="row">资料:</th> <td><a href="https://cn.bing.com/translator" target="_blank" rel="noopener noreferrer"><img data-name="微软翻译" class="ql-icon" onerror="this.style.display=\'none\'">微软翻译</a></td> <td><a href="https://translate.google.com.hk/?sl=auto&tl=zh-TW&op=translate" target="_blank" rel="noopener noreferrer"><img data-name="谷歌翻譯" class="ql-icon" onerror="this.style.display=\'none\'">谷歌翻譯</a></td> <td><a href="http://fanyi.baidu.com/" target="_blank" rel="noopener noreferrer"><img data-name="百度翻译" class="ql-icon" onerror="this.style.display=\'none\'">百度翻译</a></td> <td><a href="http://www.runoob.com/" target="_blank" rel="noopener noreferrer"><img data-name="菜鸟教程" class="ql-icon" onerror="this.style.display=\'none\'">菜鸟教程</a></td> <td><a href="http://www.languageguide.org/english/vocabulary/" target="_blank" rel="noopener noreferrer"><img data-name="英语学习" class="ql-icon" onerror="this.style.display=\'none\'">英语学习</a></td> </tr> <tr> <th scope="row"></th> <td><a href="https://zh.forvo.com/" target="_blank" rel="noopener noreferrer"><img data-name="发音指南" class="ql-icon" onerror="this.style.display=\'none\'">发音指南</a></td> <td><a href="https://mp.weixin.qq.com/" target="_blank" rel="noopener noreferrer"><img data-name="公众号" class="ql-icon" onerror="this.style.display=\'none\'">公众号</a></td> <td></td> <td></td> <td></td> </tr> <tr> <th scope="row">其他:</th> <td><a href="http://ereee.cc/h/" target="_blank" rel="noopener noreferrer"><img data-name="拉黑名单" class="ql-icon" onerror="this.style.display=\'none\'">拉黑名单</a></td> <td><a href="http://ereee.cc/chi/" target="_blank" rel="noopener noreferrer"><img data-name="拉黑名单" class="ql-icon" onerror="this.style.display=\'none\'">吃什么</a></td> <td><a href="https://textfree.us/" target="_blank" rel="noopener noreferrer"><img data-name="免费短信" class="ql-icon" onerror="this.style.display=\'none\'">免费短信</a></td> <td><a href="http://www.live.com/" target="_blank" rel="noopener noreferrer"><img data-name="微软邮箱" class="ql-icon" onerror="this.style.display=\'none\'">微软邮箱</a></td> <td><a href="http://mail.163.com/" target="_blank" rel="noopener noreferrer"><img data-name="网易邮箱" class="ql-icon" onerror="this.style.display=\'none\'">网易邮箱</a></td> </tr> <tr> <th scope="row"></th> <td><a href="https://filehelper.weixin.qq.com/" target="_blank" rel="noopener noreferrer"><img data-name="公众号" class="ql-icon" onerror="this.style.display=\'none\'">微信文件</a></td> <td><a href="https://greasyfork.org/zh-CN/scripts?filter_locale=1" target="_blank" rel="noopener noreferrer"><img data-name="脚本插件" class="ql-icon" onerror="this.style.display=\'none\'">脚本插件</a></td> <td><a href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer"><img data-name="Steam" class="ql-icon" onerror="this.style.display=\'none\'">Steam</a></td> <td></td> <td></td> </tr> </table>
+<section class="quick-links" id="quickLinks" aria-label="快捷书签">
+<table class="sq-table" role="presentation"><tr><th scope="row">论坛:</th>
+<td><a href="http://bbs.mydigit.cn/" target="_blank" rel="noopener noreferrer"><img data-name="数码之家" class="ql-icon" onerror="this.style.display=\'none\'">数码之家</a></td>
+<td><a href="https://www.itsk.com/" target="_blank" rel="noopener noreferrer"><img data-name="自由天空" class="ql-icon" onerror="this.style.display=\'none\'">自由天空</a></td>
+<td><a href="http://bbs.wuyou.net/forum.php" target="_blank" rel="noopener noreferrer"><img data-name="无忧启动" class="ql-icon" onerror="this.style.display=\'none\'">无忧启动</a></td>
+<td><a href="http://www.lucky8k.com/" target="_blank" rel="noopener noreferrer"><img data-name="Veket" class="ql-icon" onerror="this.style.display=\'none\'">Veket</a></td>
+<td><a href="http://www.pcbeta.com/" target="_blank" rel="noopener noreferrer"><img data-name="远景在线" class="ql-icon" onerror="this.style.display=\'none\'">远景在线</a></td>
+</tr><tr><th scope="row"></th>
+<td><a href="http://www.anywlan.com/" target="_blank" rel="noopener noreferrer"><img data-name="Anywlan" class="ql-icon" onerror="this.style.display=\'none\'">Anywlan</a></td>
+<td><a href="https://www.52pojie.cn/forum-16-1.html" target="_blank" rel="noopener noreferrer"><img data-name="吾爱破解" class="ql-icon" onerror="this.style.display=\'none\'">吾爱破解</a></td>
+<td><a href="http://www.zygx8.com/forum.php?mod=forumdisplay&fid=102" target="_blank" rel="noopener noreferrer"><img data-name="Veket" class="ql-icon" onerror="this.style.display=\'none\'">共享资源</a></td>
+<td><a href="https://www.kdocs.cn/latest?from=docs" target="_blank" rel="noopener noreferrer"><img data-name="金山文档" class="ql-icon" onerror="this.style.display=\'none\'">金山文档</a></td>
+<td></td>
+</tr><tr><th scope="row">购物:</th>
+<td><a href="http://www.taobao.com/" target="_blank" rel="noopener noreferrer"><img data-name="淘宝商城" class="ql-icon" onerror="this.style.display=\'none\'">淘宝商城</a></td>
+<td><a href="http://www.jd.com/" target="_blank" rel="noopener noreferrer"><img data-name="京东商城" class="ql-icon" onerror="this.style.display=\'none\'">京东商城</a></td>
+<td><a href="https://www.goofish.com/" target="_blank" rel="noopener noreferrer"><img data-name="闲鱼" class="ql-icon" onerror="this.style.display=\'none\'">闲鱼</a></td>
+<td><a href="https://pub.alimama.com/" target="_blank" rel="noopener noreferrer"><img data-name="淘宝联盟" class="ql-icon" onerror="this.style.display=\'none\'">淘宝联盟</a></td>
+<td></td>
+</tr><tr><th scope="row">WEB:</th>
+<td><a href="https://my.vultr.com/" target="_blank" rel="noopener noreferrer"><img data-name="Vultr VPS" class="ql-icon" onerror="this.style.display=\'none\'">Vultr VPS</a></td>
+<td><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer"><img data-name="阿里云" class="ql-icon" onerror="this.style.display=\'none\'">阿里云</a></td>
+<td><a href="https://www.ddnsto.com/app/#/devices" target="_blank" rel="noopener noreferrer"><img data-name="易有云" class="ql-icon" onerror="this.style.display=\'none\'">易有云</a></td>
+<td><a href="https://web.parsec.app/" target="_blank" rel="noopener noreferrer"><img data-name="Parsec" class="ql-icon" onerror="this.style.display=\'none\'">Parsec</a></td>
+<td><a href="http://www.wdlinux.cn/" target="_blank" rel="noopener noreferrer"><img data-name="WDlinux" class="ql-icon" onerror="this.style.display=\'none\'">WDlinux</a></td>
+</tr><tr><th scope="row"></th>
+<td><a href="https://github.com/" target="_blank" rel="noopener noreferrer"><img data-name="GitHub" class="ql-icon" onerror="this.style.display=\'none\'">GitHub</a></td>
+<td><a href="https://sunlogin.oray.com/" target="_blank" rel="noopener noreferrer"><img data-name="向日葵" class="ql-icon" onerror="this.style.display=\'none\'">向日葵</a></td>
+<td><a href="https://rustdesk.com/zh-cn/" target="_blank" rel="noopener noreferrer"><img data-name="RustDesk" class="ql-icon" onerror="this.style.display=\'none\'">RustDesk</a></td>
+<td><a href="https://my.zerotier.com/network" target="_blank" rel="noopener noreferrer"><img data-name="ZeroTier" class="ql-icon" onerror="this.style.display=\'none\'">ZeroTier</a></td>
+<td></td>
+</tr><tr><th scope="row">视频:</th>
+<td><a href="https://www.douyu.com/" target="_blank" rel="noopener noreferrer"><img data-name="斗鱼直播" class="ql-icon" onerror="this.style.display=\'none\'">斗鱼直播</a></td>
+<td><a href="https://www.bilibili.com/" target="_blank" rel="noopener noreferrer"><img data-name="哔哩哔哩" class="ql-icon" onerror="this.style.display=\'none\'">哔哩哔哩</a></td>
+<td><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img data-name="YouTube" class="ql-icon" onerror="this.style.display=\'none\'">YouTube</a></td>
+<td><a href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer"><img data-name="Twitch" class="ql-icon" onerror="this.style.display=\'none\'">Twitch</a></td>
+<td></td>
+</tr><tr><th scope="row">资料:</th>
+<td><a href="https://cn.bing.com/translator" target="_blank" rel="noopener noreferrer"><img data-name="微软翻译" class="ql-icon" onerror="this.style.display=\'none\'">微软翻译</a></td>
+<td><a href="https://translate.google.com.hk/?sl=auto&tl=zh-TW&op=translate" target="_blank" rel="noopener noreferrer"><img data-name="谷歌翻譯" class="ql-icon" onerror="this.style.display=\'none\'">谷歌翻譯</a></td>
+<td><a href="http://fanyi.baidu.com/" target="_blank" rel="noopener noreferrer"><img data-name="百度翻译" class="ql-icon" onerror="this.style.display=\'none\'">百度翻译</a></td>
+<td><a href="http://www.runoob.com/" target="_blank" rel="noopener noreferrer"><img data-name="菜鸟教程" class="ql-icon" onerror="this.style.display=\'none\'">菜鸟教程</a></td>
+<td><a href="http://www.languageguide.org/english/vocabulary/" target="_blank" rel="noopener noreferrer"><img data-name="英语学习" class="ql-icon" onerror="this.style.display=\'none\'">英语学习</a></td>
+</tr><tr><th scope="row"></th>
+<td><a href="https://zh.forvo.com/" target="_blank" rel="noopener noreferrer"><img data-name="发音指南" class="ql-icon" onerror="this.style.display=\'none\'">发音指南</a></td>
+<td><a href="https://mp.weixin.qq.com/" target="_blank" rel="noopener noreferrer"><img data-name="公众号" class="ql-icon" onerror="this.style.display=\'none\'">公众号</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><th scope="row">其他:</th>
+<td><a href="http://ereee.cc/h/" target="_blank" rel="noopener noreferrer"><img data-name="拉黑名单" class="ql-icon" onerror="this.style.display=\'none\'">拉黑名单</a></td>
+<td><a href="http://ereee.cc/chi/" target="_blank" rel="noopener noreferrer"><img data-name="拉黑名单" class="ql-icon" onerror="this.style.display=\'none\'">吃什么</a></td>
+<td><a href="https://textfree.us/" target="_blank" rel="noopener noreferrer"><img data-name="免费短信" class="ql-icon" onerror="this.style.display=\'none\'">免费短信</a></td>
+<td><a href="http://www.live.com/" target="_blank" rel="noopener noreferrer"><img data-name="微软邮箱" class="ql-icon" onerror="this.style.display=\'none\'">微软邮箱</a></td>
+<td><a href="http://mail.163.com/" target="_blank" rel="noopener noreferrer"><img data-name="网易邮箱" class="ql-icon" onerror="this.style.display=\'none\'">网易邮箱</a></td>
+</tr><tr><th scope="row"></th>
+<td><a href="https://filehelper.weixin.qq.com/" target="_blank" rel="noopener noreferrer"><img data-name="公众号" class="ql-icon" onerror="this.style.display=\'none\'">微信文件</a></td>
+<td><a href="https://greasyfork.org/zh-CN/scripts?filter_locale=1" target="_blank" rel="noopener noreferrer"><img data-name="脚本插件" class="ql-icon" onerror="this.style.display=\'none\'">脚本插件</a></td>
+<td><a href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer"><img data-name="Steam" class="ql-icon" onerror="this.style.display=\'none\'">Steam</a></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 </section>
-
 <main id="bookmarks" role="main"></main>
-<footer role="contentinfo"> <a href="https://beian.miit.gov.cn/" title="备案信息" rel="noopener noreferrer">湘ICP备2022008394号</a>
-</footer>
-
-<!-- base64.js 先加载（quickLinksIcons 数据），同步执行 -->
+<footer role="contentinfo"> <a href="https://beian.miit.gov.cn/" title="备案信息" rel="noopener noreferrer">湘ICP备2022008394号</a></footer>
 <script src="js/base64.js"></script>
-<!-- app.js 和 bookmarks.js 异步加载 -->
 <script defer src="js/bookmarks.js"></script>
 <script defer src="js/app.js"></script>
-</body>
-</html>
+</body></html>
