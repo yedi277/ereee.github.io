@@ -207,3 +207,54 @@ document.addEventListener('click', e => {
     closePanel();
   }
 });
+
+/* ================================================================
+   暗色模式
+================================================================ */
+
+const darkToggle = document.getElementById('darkToggle');
+
+function applyTheme(dark) {
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  darkToggle.textContent = dark ? '☀️' : '🌙';
+  darkToggle.setAttribute('title', dark ? '切换亮色模式' : '切换暗色模式');
+  localStorage.setItem('theme', dark ? 'dark' : 'light');
+}
+
+darkToggle.addEventListener('click', () => {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  applyTheme(!isDark);
+});
+
+// 初始化：读取本地存储或系统偏好
+(function initTheme() {
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    applyTheme(saved === 'dark');
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    applyTheme(true);
+  } else {
+    applyTheme(false);
+  }
+})();
+
+// 监听系统主题变化
+if (window.matchMedia) {
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!localStorage.getItem('theme')) {
+      applyTheme(e.matches);
+    }
+  });
+}
+
+/* ================================================================
+   图片加载错误处理
+================================================================ */
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.addEventListener('error', function(e) {
+    if (e.target.tagName === 'IMG' && e.target.classList.contains('ql-icon')) {
+      e.target.style.display = 'none';
+    }
+  }, true);
+});
+
