@@ -685,7 +685,7 @@ var musicList = [
         pic_id: "109951163244853571",
         lyric_id: "150361",
         pic: "https://p3.music.126.net/0543F-ln2Apdiopez_jbsA==/109951163244853571.jpg?param=300y300",
-        url: " /老歌/三国恋 - Tank.mp3"
+        url: "/老歌/三国恋 - Tank.mp3"
     }, {
         id: "69827",
         name: "太多",
@@ -696,7 +696,7 @@ var musicList = [
         pic_id: "109951165293600860",
         lyric_id: "69827",
         pic: "null",
-        url: " /老歌/太多 - 陈冠蒲.mp3"
+        url: "/老歌/太多 - 陈冠蒲.mp3"
     }, {
         id: "239942",
         name: "不要用我的爱来伤害我",
@@ -707,7 +707,7 @@ var musicList = [
         pic_id: "60473139533535",
         lyric_id: "239942",
         pic: "null",
-        url: " /老歌/不要用我的爱来伤害我 - 韩晶.mp3"
+        url: "/老歌/不要用我的爱来伤害我 - 韩晶.mp3"
     }, {
         id: "2061825547",
         name: "一直很安静（FarAty Bootleg）",
@@ -718,7 +718,7 @@ var musicList = [
         pic_id: "109951168720979969",
         lyric_id: "2061825547",
         pic: "null",
-        url: " /老歌/一直很安静 - 阿桑.mp3"
+        url: "/老歌/一直很安静 - 阿桑.mp3"
     }, {
         id: "239188",
         name: "没那么简单",
@@ -729,7 +729,7 @@ var musicList = [
         pic_id: "109951163695427333",
         lyric_id: "239188",
         pic: "null",
-        url: " /老歌/没那么简单 - 黄小琥.mp3"
+        url: "/老歌/没那么简单 - 黄小琥.mp3"
     }, {
         id: "178142",
         name: "擦肩而过",
@@ -740,7 +740,7 @@ var musicList = [
         pic_id: "109951164447827758",
         lyric_id: "178142",
         pic: "null",
-        url: " /老歌/擦肩而过 - 宇桐非.mp3"
+        url: "/老歌/擦肩而过 - 宇桐非.mp3"
     }, {
         id: "176430",
         name: "爱上你是一个错",
@@ -751,7 +751,7 @@ var musicList = [
         pic_id: "109951168602506322",
         lyric_id: "176430",
         pic: "https://p3.music.126.net/_mMnOkzFFCdHzegUWrVwyQ==/109951168602506322.jpg?param=300y300",
-        url: " /老歌/爱上你是一个错 - 杨培安.mp3"
+        url: "/老歌/爱上你是一个错 - 杨培安.mp3"
     }, {
         id: "307081",
         name: "表白",
@@ -762,7 +762,7 @@ var musicList = [
         pic_id: "109951165623500611",
         lyric_id: "307081",
         pic: "null",
-        url: " /老歌/表白 - 萧亚轩.mp3"
+        url: "/老歌/表白 - 萧亚轩.mp3"
     }, {
         id: "85621",
         name: "第一次",
@@ -784,7 +784,7 @@ var musicList = [
         pic_id: "53876069773370",
         lyric_id: "66525",
         pic: "null",
-        url: " /老歌/有没有人告诉你 - 陈楚生.mp3"
+        url: "/老歌/有没有人告诉你 - 陈楚生.mp3"
     }, {
         id: "1476410303",
         name: "预谋",
@@ -795,7 +795,7 @@ var musicList = [
         pic_id: "109951165293167945",
         lyric_id: "1476410303",
         pic: "null",
-        url: " /老歌/预谋 - 许佳慧.mp3"
+        url: "/老歌/预谋 - 许佳慧.mp3"
     }, {
         id: "369173",
         name: "外滩十八号",
@@ -806,7 +806,7 @@ var musicList = [
         pic_id: "54975581401145",
         lyric_id: "369173",
         pic: "null",
-        url: " /老歌/外滩十八号 - 袁成杰、戚薇.mp3"
+        url: "/老歌/外滩十八号 - 袁成杰、戚薇.mp3"
     }, {
         id: "8ee2d830c68e9081c827ab3eb4cf952f",
         name: "老人与海",
@@ -817,7 +817,7 @@ var musicList = [
         pic_id: "8ee2d830c68e9081c827ab3eb4cf952f",
         lyric_id: "8ee2d830c68e9081c827ab3eb4cf952f",
         pic: "null",
-        url: " /老歌/老人与海 - 海鸣威、吴琼.mp3"
+        url: "/老歌/老人与海 - 海鸣威、吴琼.mp3"
     }, {
         id: "259a8c30da12364c588ca148e47ac135",
         name: "太早",
@@ -828,7 +828,7 @@ var musicList = [
         pic_id: "259a8c30da12364c588ca148e47ac135",
         lyric_id: "259a8c30da12364c588ca148e47ac135",
         pic: "null",
-        url: " /老歌/太早 - 刘允乐.mp3"
+        url: "/老歌/太早 - 刘允乐.mp3"
     }, {
         id: "5257437",
         name: "当你孤单你会想起谁",
@@ -839,7 +839,7 @@ var musicList = [
         pic_id: "71468255823115",
         lyric_id: "5257437",
         pic: "null",
-        url: " /老歌/当你孤单你会想起谁 - 张栋梁.mp3"
+        url: "/老歌/当你孤单你会想起谁 - 张栋梁.mp3"
     }, {
         id: "3e2057a44e12b065c19073a9ce30b2c9",
         name: "被伤过的心还可以爱谁",
@@ -850,7 +850,7 @@ var musicList = [
         pic_id: "3e2057a44e12b065c19073a9ce30b2c9",
         lyric_id: "3e2057a44e12b065c19073a9ce30b2c9",
         pic: "null",
-        url: " /老歌/被伤过的心还可以爱谁 - 六哲.mp3"
+        url: "/老歌/被伤过的心还可以爱谁 - 六哲.mp3"
     }, {
         id: "dfd5b81295325e474d0d3c979e172127",
         name: "生日礼物",
@@ -861,7 +861,7 @@ var musicList = [
         pic_id: "dfd5b81295325e474d0d3c979e172127",
         lyric_id: "dfd5b81295325e474d0d3c979e172127",
         pic: "null",
-        url: " /老歌/生日礼物 - 江涛.mp3"
+        url: "/老歌/生日礼物 - 江涛.mp3"
     }, {
         id: "20859cd14a9cbf023f4f100a714b2bd0",
         name: "花香",
@@ -872,7 +872,7 @@ var musicList = [
         pic_id: "20859cd14a9cbf023f4f100a714b2bd0",
         lyric_id: "20859cd14a9cbf023f4f100a714b2bd0",
         pic: "null",
-        url: " /老歌/花香 - 许绍洋.mp3"
+        url: "/老歌/花香 - 许绍洋.mp3"
     }, {
         id: "a3d1859a44a77135960be8c0a32dc624",
         name: "蝴蝶泉边",
@@ -883,7 +883,7 @@ var musicList = [
         pic_id: "a3d1859a44a77135960be8c0a32dc624",
         lyric_id: "a3d1859a44a77135960be8c0a32dc624",
         pic: "null",
-        url: " /老歌/蝴蝶泉边(Live) - 黄雅莉.mp3"
+        url: "/老歌/蝴蝶泉边(Live) - 黄雅莉.mp3"
     }, {
         id: "ba4bf6853219717be2e1cbf3388aef86",
         name: "十一年",
@@ -894,7 +894,7 @@ var musicList = [
         pic_id: "ba4bf6853219717be2e1cbf3388aef86",
         lyric_id: "ba4bf6853219717be2e1cbf3388aef86",
         pic: "null",
-        url: " /老歌/十一年 - 邱永传.mp3"
+        url: "/老歌/十一年 - 邱永传.mp3"
     }, {
         id: "1472877668",
         name: "爱死了昨天 (live)",
@@ -905,7 +905,7 @@ var musicList = [
         pic_id: "109951165256207165",
         lyric_id: "1472877668",
         pic: "null",
-        url: " /老歌/爱死了昨天 - 李慧珍.mp3"
+        url: "/老歌/爱死了昨天 - 李慧珍.mp3"
     }, {
         id: "301464",
         name: "飞舞",
@@ -916,7 +916,7 @@ var musicList = [
         pic_id: "31885837222351",
         lyric_id: "301464",
         pic: "null",
-        url: " /老歌/飞舞 - 王冰洋.mp3"
+        url: "/老歌/飞舞 - 王冰洋.mp3"
     }, {
         id: "135362",
         name: "该死的温柔",
@@ -927,7 +927,7 @@ var musicList = [
         pic_id: "109951165698169768",
         lyric_id: "135362",
         pic: "null",
-        url: " /老歌/该死的温柔 - 马天宇.mp3"
+        url: "/老歌/该死的温柔 - 马天宇.mp3"
     }, {
         id: "66525",
         name: "有没有人告诉你",
@@ -949,7 +949,7 @@ var musicList = [
         pic_id: "109951165422696727",
         lyric_id: "138793",
         pic: "null",
-        url: " /老歌/孤单北半球 - 欧得洋.mp3"
+        url: "/老歌/孤单北半球 - 欧得洋.mp3"
     }, {
         id: "92305",
         name: "单车恋人",
@@ -971,7 +971,7 @@ var musicList = [
         pic_id: "109951168698042092",
         lyric_id: "2058621399",
         pic: "null",
-        url: " /老歌/别说我的眼泪你无所谓 - 东来东往.mp3"
+        url: "/老歌/别说我的眼泪你无所谓 - 东来东往.mp3"
     }, {
         id: "360832",
         name: "杀破狼(Through The Fire Remix)",
@@ -993,7 +993,7 @@ var musicList = [
         pic_id: "c6cca2a224d7f6d75ed7ac5e1cdb22ec",
         lyric_id: "c6cca2a224d7f6d75ed7ac5e1cdb22ec",
         pic: "null",
-        url: " /老歌/那么骄傲(重遇版) - 金海心.mp3"
+        url: "/老歌/那么骄傲(重遇版) - 金海心.mp3"
     }, {
         id: "33431ba8c2fb438ed064ae5deeb2985f",
         name: "夏天的风",
@@ -1004,7 +1004,7 @@ var musicList = [
         pic_id: "33431ba8c2fb438ed064ae5deeb2985f",
         lyric_id: "33431ba8c2fb438ed064ae5deeb2985f",
         pic: "null",
-        url: " /老歌/夏天的风 - 温岚.mp3"
+        url: "/老歌/夏天的风 - 温岚.mp3"
     }, {
         id: "16df15ce32dee918c64cc2a98327f4b9",
         name: "想太多",
@@ -1026,7 +1026,7 @@ var musicList = [
         pic_id: "712eb54370ad2067081c72b5f74b4b2e",
         lyric_id: "712eb54370ad2067081c72b5f74b4b2e",
         pic: "null",
-        url: " /老歌/死心塌地 - 夹子道.mp3"
+        url: "/老歌/死心塌地 - 夹子道.mp3"
     }, {
         id: "8ace2d4510e26fbdc4736055c5ae4b03",
         name: "有一种爱叫做放手",
@@ -1037,7 +1037,7 @@ var musicList = [
         pic_id: "8ace2d4510e26fbdc4736055c5ae4b03",
         lyric_id: "8ace2d4510e26fbdc4736055c5ae4b03",
         pic: "null",
-        url: " /老歌/有一种爱叫做放手 - 阿木.mp3"
+        url: "/老歌/有一种爱叫做放手 - 阿木.mp3"
     }, {
         id: "7b76de855eb7d5af18abc31e13cad93b",
         name: "最后一次的温柔",
@@ -1048,7 +1048,7 @@ var musicList = [
         pic_id: "7b76de855eb7d5af18abc31e13cad93b",
         lyric_id: "7b76de855eb7d5af18abc31e13cad93b",
         pic: "null",
-        url: " /老歌/最后一次的温柔 - 兰雨.mp3"
+        url: "/老歌/最后一次的温柔 - 兰雨.mp3"
     }, {
         id: "66c760662799f3ab7a59d53cb7631cf0",
         name: "下辈子如果我还记得你",
@@ -1059,7 +1059,7 @@ var musicList = [
         pic_id: "66c760662799f3ab7a59d53cb7631cf0",
         lyric_id: "66c760662799f3ab7a59d53cb7631cf0",
         pic: "null",
-        url: " /老歌/下辈子如果我还记得你 - 马郁.mp3"
+        url: "/老歌/下辈子如果我还记得你 - 马郁.mp3"
     }, {
         id: "d1c38d4557f5842a44492c1992c3a79b",
         name: "天使的翅膀",
@@ -1070,7 +1070,7 @@ var musicList = [
         pic_id: "d1c38d4557f5842a44492c1992c3a79b",
         lyric_id: "d1c38d4557f5842a44492c1992c3a79b",
         pic: "null",
-        url: " /老歌/天使的翅膀 - 安琥.mp3"
+        url: "/老歌/天使的翅膀 - 安琥.mp3"
     }, {
         id: "a49e9cf2a435138df8b4df55c149fc44",
         name: "分手在那个秋天",
@@ -1081,7 +1081,7 @@ var musicList = [
         pic_id: "a49e9cf2a435138df8b4df55c149fc44",
         lyric_id: "a49e9cf2a435138df8b4df55c149fc44",
         pic: "null",
-        url: " /老歌/分手在那个秋天 - 浩瀚.mp3"
+        url: "/老歌/分手在那个秋天 - 浩瀚.mp3"
     }, {
         id: "1d687296864d97f63a3729dff785295d",
         name: "心痛2009",
@@ -1092,7 +1092,7 @@ var musicList = [
         pic_id: "1d687296864d97f63a3729dff785295d",
         lyric_id: "1d687296864d97f63a3729dff785295d",
         pic: "null",
-        url: " /老歌/心痛2009 - 欢子.mp3"
+        url: "/老歌/心痛2009 - 欢子.mp3"
     }, {
         id: "c60817bf6672fc113764c9c08d971c4d",
         name: "等一分钟",
@@ -1103,7 +1103,7 @@ var musicList = [
         pic_id: "c60817bf6672fc113764c9c08d971c4d",
         lyric_id: "c60817bf6672fc113764c9c08d971c4d",
         pic: "null",
-        url: " /老歌/等一分钟 - 徐誉滕.mp3"
+        url: "/老歌/等一分钟 - 徐誉滕.mp3"
     }, {
         id: "1383381667",
         name: "犯错",
@@ -1114,7 +1114,7 @@ var musicList = [
         pic_id: "109951164281883574",
         lyric_id: "1383381667",
         pic: "null",
-        url: " /老歌/犯错 - 顾峰、斯琴高丽.mp3"
+        url: "/老歌/犯错 - 顾峰、斯琴高丽.mp3"
     }, {
         id: "5839b999eadfebe5fef286a00a3ee3d7",
         name: "求佛",
@@ -1125,7 +1125,7 @@ var musicList = [
         pic_id: "5839b999eadfebe5fef286a00a3ee3d7",
         lyric_id: "5839b999eadfebe5fef286a00a3ee3d7",
         pic: "null",
-        url: " /老歌/求佛 - 誓言.mp3"
+        url: "/老歌/求佛 - 誓言.mp3"
     }, {
         id: "506fd1f0fce8d0c0ee11ee272c1d9636",
         name: "秋天不回来",
@@ -1136,7 +1136,7 @@ var musicList = [
         pic_id: "506fd1f0fce8d0c0ee11ee272c1d9636",
         lyric_id: "506fd1f0fce8d0c0ee11ee272c1d9636",
         pic: "null",
-        url: " /老歌/秋天不回来 - 王强.mp3"
+        url: "/老歌/秋天不回来 - 王强.mp3"
     }, {
         id: "fc2fbae20f74c10e3326e2f5dc823678",
         name: "你到底爱谁",
@@ -1147,7 +1147,7 @@ var musicList = [
         pic_id: "fc2fbae20f74c10e3326e2f5dc823678",
         lyric_id: "fc2fbae20f74c10e3326e2f5dc823678",
         pic: "null",
-        url: " /老歌/你到底爱谁 - 刘嘉亮.mp3"
+        url: "/老歌/你到底爱谁 - 刘嘉亮.mp3"
     }, {
         id: "a47947fdf6aaac2f86577362ab3c38f1",
         name: "今生最爱",
@@ -1158,7 +1158,7 @@ var musicList = [
         pic_id: "a47947fdf6aaac2f86577362ab3c38f1",
         lyric_id: "a47947fdf6aaac2f86577362ab3c38f1",
         pic: "null",
-        url: " /老歌/今生最爱 - 王程明.mp3"
+        url: "/老歌/今生最爱 - 王程明.mp3"
     }, {
         id: "780a8a5b22c5dcc484d7b8defc9d2f71",
         name: "做你的爱人",
@@ -1169,7 +1169,7 @@ var musicList = [
         pic_id: "780a8a5b22c5dcc484d7b8defc9d2f71",
         lyric_id: "780a8a5b22c5dcc484d7b8defc9d2f71",
         pic: "null",
-        url: " /老歌/做你的爱人 - 饶天亮.mp3"
+        url: "/老歌/做你的爱人 - 饶天亮.mp3"
     }, {
         id: "7944fc9a656c8bb2078d323300f701ac",
         name: "回来我的爱",
@@ -1180,7 +1180,7 @@ var musicList = [
         pic_id: "7944fc9a656c8bb2078d323300f701ac",
         lyric_id: "7944fc9a656c8bb2078d323300f701ac",
         pic: "null",
-        url: " /老歌/回来我的爱 - 阳一.mp3"
+        url: "/老歌/回来我的爱 - 阳一.mp3"
     }, {
         id: "50fecc8d5e39b12992cf56520de4aae2",
         name: "一个人的寂寞两个人的错",
@@ -1191,7 +1191,7 @@ var musicList = [
         pic_id: "50fecc8d5e39b12992cf56520de4aae2",
         lyric_id: "50fecc8d5e39b12992cf56520de4aae2",
         pic: "null",
-        url: " /老歌/一个人的寂寞两个人的错 - 贺一航.mp3"
+        url: "/老歌/一个人的寂寞两个人的错 - 贺一航.mp3"
     }, {
         id: "61bb8560d7fb979eb70ec5050990db95",
         name: "丁香花",
@@ -1202,7 +1202,7 @@ var musicList = [
         pic_id: "61bb8560d7fb979eb70ec5050990db95",
         lyric_id: "61bb8560d7fb979eb70ec5050990db95",
         pic: "null",
-        url: " /老歌/丁香花 - 唐磊.mp3"
+        url: "/老歌/丁香花 - 唐磊.mp3"
     }, {
         id: "2a38df2e6fd85ccbb84c006c16ec8adc",
         name: "那一夜",
@@ -1213,7 +1213,7 @@ var musicList = [
         pic_id: "2a38df2e6fd85ccbb84c006c16ec8adc",
         lyric_id: "2a38df2e6fd85ccbb84c006c16ec8adc",
         pic: "null",
-        url: " /老歌/那一夜 - 谢军.mp3"
+        url: "/老歌/那一夜 - 谢军.mp3"
     }, {
         id: "299470",
         name: "我不是黄蓉",
@@ -1224,7 +1224,7 @@ var musicList = [
         pic_id: "109951165625508031",
         lyric_id: "299470",
         pic: "null",
-        url: " /老歌/我不是黄蓉 - 王蓉.mp3"
+        url: "/老歌/我不是黄蓉 - 王蓉.mp3"
     }, {
         id: "cbe20c359509d697bf1a2f375553d5ce",
         name: "爱情错觉",
@@ -1235,7 +1235,7 @@ var musicList = [
         pic_id: "cbe20c359509d697bf1a2f375553d5ce",
         lyric_id: "cbe20c359509d697bf1a2f375553d5ce",
         pic: "null",
-        url: " /老歌/爱情错觉 - 王娅.mp3"
+        url: "/老歌/爱情错觉 - 王娅.mp3"
     }, {
         id: "ff73ad3464036b37feaf5d9d940fdf3f",
         name: "独角戏",
@@ -1246,7 +1246,7 @@ var musicList = [
         pic_id: "ff73ad3464036b37feaf5d9d940fdf3f",
         lyric_id: "ff73ad3464036b37feaf5d9d940fdf3f",
         pic: "null",
-        url: " /老歌/独角戏(Live) - 许茹芸.mp3"
+        url: "/老歌/独角戏(Live) - 许茹芸.mp3"
     }, {
         id: "cbd9a8cfaad5912915cec3fca5d3b8b9",
         name: "黄昏",
@@ -1257,7 +1257,7 @@ var musicList = [
         pic_id: "cbd9a8cfaad5912915cec3fca5d3b8b9",
         lyric_id: "cbd9a8cfaad5912915cec3fca5d3b8b9",
         pic: "null",
-        url: " /老歌/黄昏 - 周传雄.mp3"
+        url: "/老歌/黄昏 - 周传雄.mp3"
     }]
     },
 	
