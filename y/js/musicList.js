@@ -60,7 +60,7 @@ var musicList = [
                 pic_id: "",  // 封面ID
                 lyric_id: "357462",  // 歌词ID
                 pic: "https://p3.music.126.net/qg3MkYPvU8A22Aqg451-AQ==/109951165714848195.jpg?param=300y300",    // 专辑图片
-                url: "http://g.yedii.com/music/123木头人 -黑Girl.mp3"   // mp3链接（此项建议不填，除非你有该歌曲的比较稳定的外链）
+                url: "/music/123木头人 -黑Girl.mp3"   // mp3链接（此项建议不填，除非你有该歌曲的比较稳定的外链）
             }, {
         id: "1217823",
         name: "B What U Wanna B",
@@ -71,7 +71,7 @@ var musicList = [
         pic_id: "109951165994365993",
         lyric_id: "1217823",
         pic: "",
-        url: "http://g.yedii.com/music/B What U Wanna B-Darin.mp3"
+        url: "/music/B What U Wanna B-Darin.mp3"
     }, {
         id: "31384245",
         name: "Boom Clap",
@@ -82,7 +82,7 @@ var musicList = [
         pic_id: "2895014116201169",
         lyric_id: "31384245",
         pic: "",
-        url: "http://g.yedii.com/music/Boom Clap-Charli XCX.mp3"
+        url: "/music/Boom Clap-Charli XCX.mp3"
     }, {
         id: "4164331",
         name: "Bye Bye Bye",
@@ -93,7 +93,7 @@ var musicList = [
         pic_id: "1695446930044953",
         lyric_id: "4164331",
         pic: "",
-        url: "http://g.yedii.com/music/Bye Bye Bye-Lovestoned.mp3"
+        url: "/music/Bye Bye Bye-Lovestoned.mp3"
     }, {
         id: "16432803",
         name: "Chancenlos",
@@ -104,7 +104,7 @@ var musicList = [
         pic_id: "694891348761475",
         lyric_id: "16432803",
         pic: "null",
-        url: "http://g.yedii.com/music/Chancenlos-Annett Louisan.mp3"
+        url: "/music/Chancenlos-Annett Louisan.mp3"
     }, {
         id: "22494632",
         name: "Danke",
@@ -115,7 +115,7 @@ var musicList = [
         pic_id: "109951168041060065",
         lyric_id: "22494632",
         pic: "",
-        url: "http://g.yedii.com/music/Danke-LaFee.mp3"
+        url: "/music/Danke-LaFee.mp3"
     }, {
         id: "16432790",
         name: "Die DingeAnnett Louisan",
@@ -126,7 +126,7 @@ var musicList = [
         pic_id: "597034813889354",
         lyric_id: "16432790",
         pic: "",
-        url: "http://g.yedii.com/music/Die Dinge-Annett Louisan.mp3"
+        url: "/music/Die Dinge-Annett Louisan.mp3"
     }, {
         id: "28256265",
         name: "Du fehlst mir so",
@@ -137,7 +137,7 @@ var musicList = [
         pic_id: "109951165969123610",
         lyric_id: "28256265",
         pic: "",
-        url: "http://g.yedii.com/music/Du fehlst mir so-Annett Louisan.mp3"
+        url: "/music/Du fehlst mir so-Annett Louisan.mp3"
     }, {
         id: "3880911",
         name: "Es Ist Ein Schnee Gefallen",
@@ -148,7 +148,7 @@ var musicList = [
         pic_id: "1699844976549492",
         lyric_id: "3880911",
         pic: "",
-        url: "http://g.yedii.com/music/Es Ist Ein Schnee Gefallen-Adaro.mp3"
+        url: "/music/Es Ist Ein Schnee Gefallen-Adaro.mp3"
     }, {
         id: "36990266",
         name: "Faded",
@@ -159,7 +159,7 @@ var musicList = [
         pic_id: "109951165976856263",
         lyric_id: "36990266",
         pic: "",
-        url: "http://g.yedii.com/music/Faded-Alan Walker.mp3"
+        url: "/music/Faded-Alan Walker.mp3"
     }, {
         id: "2700760",
         name: "Free To Be Me",
@@ -170,7 +170,7 @@ var musicList = [
         pic_id: "109951164854956267",
         lyric_id: "2700760",
         pic: "",
-        url: "http://g.yedii.com/music/Free To Be Me-Haroula Rose.mp3"
+        url: "/music/Free To Be Me-Haroula Rose.mp3"
     }, {
         id: "17635351",
         name: "Für immer",
@@ -181,7 +181,7 @@ var musicList = [
         pic_id: "755364488290776",
         lyric_id: "17635351",
         pic: "",
-        url: "http://g.yedii.com/music/Für immer-Eisblume.mp3"
+        url: "/music/Für immer-Eisblume.mp3"
     }, {
         id: "2919622",
         name: "I Am You",
@@ -192,7 +192,7 @@ var musicList = [
         pic_id: "109951163073357482",
         lyric_id: "2919622",
         pic: "",
-        url: "http://g.yedii.com/music/I Am You-Kim Taylor.mp3"
+        url: "/music/I Am You-Kim Taylor.mp3"
     }, {
         id: "3026583",
         name: "I Remember",
@@ -203,7 +203,7 @@ var musicList = [
         pic_id: "109951163436732617",
         lyric_id: "3026583",
         pic: "",
-        url: "http://g.yedii.com/music/I Remember-MOCCA.mp3"
+        url: "/music/I Remember-MOCCA.mp3"
     }, {
         id: "26348081",
         name: "Morning",
@@ -214,7 +214,7 @@ var musicList = [
         pic_id: "109951163402005652",
         lyric_id: "26348081",
         pic: "",
-        url: "http://g.yedii.com/music/Morning-卫兰.mp3"
+        url: "/music/Morning-卫兰.mp3"
     }, {
         id: "22735051",
         name: "Oh!",
@@ -225,7 +225,7 @@ var musicList = [
         pic_id: "18502581673986786",
         lyric_id: "22735051",
         pic: "",
-        url: "http://g.yedii.com/music/Oh!-少女时代.mp3"
+        url: "/music/Oh!-少女时代.mp3"
     }, {
         id: "18449193",
         name: "Say Hello",
@@ -236,7 +236,7 @@ var musicList = [
         pic_id: "109951166683572040",
         lyric_id: "18449193",
         pic: "",
-        url: "http://g.yedii.com/music/Say Hello-Rosie Thomas;Sufjan Stevens.mp3"
+        url: "/music/Say Hello-Rosie Thomas;Sufjan Stevens.mp3"
     }, {
         id: "20036333",
         name: "Schlaflied",
@@ -247,7 +247,7 @@ var musicList = [
         pic_id: "2538772349663439",
         lyric_id: "20036333",
         pic: "",
-        url: "http://g.yedii.com/music/Schlaflied-Kate & Ben.mp3"
+        url: "/music/Schlaflied-Kate & Ben.mp3"
     }, {
         id: "468882985",
         name: "Shape of You",
@@ -258,7 +258,7 @@ var musicList = [
         pic_id: "109951163032775841",
         lyric_id: "468882985",
         pic: "",
-        url: "http://g.yedii.com/music/Shape of You-J.Fla.mp3"
+        url: "/music/Shape of You-J.Fla.mp3"
     }, {
         id: "19292842",
         name: "Speak Now",
@@ -269,7 +269,7 @@ var musicList = [
         pic_id: "109951166119330991",
         lyric_id: "19292842",
         pic: "",
-        url: "http://g.yedii.com/music/Speak Now-Taylor Swift.mp3"
+        url: "/music/Speak Now-Taylor Swift.mp3"
     }, {
         id: "18836961",
         name: "Stay Here Forever",
@@ -280,7 +280,7 @@ var musicList = [
         pic_id: "19027048718874686",
         lyric_id: "18836961",
         pic: "",
-        url: "http://g.yedii.com/music/Stay Here Forever-Jewel.mp3"
+        url: "/music/Stay Here Forever-Jewel.mp3"
     }, {
         id: "28593339",
         name: "Sunshine Girl",
@@ -291,7 +291,7 @@ var musicList = [
         pic_id: "18591642115850247",
         lyric_id: "28593339",
         pic: "",
-        url: "http://g.yedii.com/music/Sunshine Girl-moumoon.mp3"
+        url: "/music/Sunshine Girl-moumoon.mp3"
     }, {
         id: "2010944468",
         name: "Symphonie",
@@ -302,7 +302,7 @@ var musicList = [
         pic_id: "109951168198554891",
         lyric_id: "2010944468",
         pic: "",
-        url: "http://g.yedii.com/music/Symphonie-Silbermond.mp3"
+        url: "/music/Symphonie-Silbermond.mp3"
     }, {
         id: "22294416",
         name: "The Girl With the Northern Soul CollectionClub 8",
@@ -313,7 +313,7 @@ var musicList = [
         pic_id: "109951167580317195",
         lyric_id: "22294416",
         pic: "",
-        url: "http://g.yedii.com/music/The Girl With the Northern Soul Collection-Club 8.mp3"
+        url: "/music/The Girl With the Northern Soul Collection-Club 8.mp3"
     }, {
         id: "32272264",
         name: "Wie geht glücklich",
@@ -324,7 +324,7 @@ var musicList = [
         pic_id: "2910407280165696",
         lyric_id: "32272264",
         pic: "",
-        url: "http://g.yedii.com/music/Wie geht glücklich-Sarah Connor.mp3"
+        url: "/music/Wie geht glücklich-Sarah Connor.mp3"
     }, {
         id: "3880988",
         name: "Wigen Wagen",
@@ -335,7 +335,7 @@ var musicList = [
         pic_id: "109951166239927364",
         lyric_id: "3880988",
         pic: "",
-        url: "http://g.yedii.com/music/Wigen Wagen-Adaro.mp3"
+        url: "/music/Wigen Wagen-Adaro.mp3"
     }, {
         id: "560399448",
         name: "极乐净土",
@@ -346,7 +346,7 @@ var musicList = [
         pic_id: "109951163295861375",
         lyric_id: "560399448",
         pic: "",
-        url: "http://g.yedii.com/music/《极乐净土》官方中文版_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili_2.mp3"
+        url: "/music/《极乐净土》官方中文版_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili_2.mp3"
     }, {
         id: "547901127",
         name: "阿刁",
@@ -357,7 +357,7 @@ var musicList = [
         pic_id: "109951163137882968",
         lyric_id: "547901127",
         pic: "",
-        url: "http://g.yedii.com/music/【祖娅纳惜·FRE】阿刁_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili.mp3"
+        url: "/music/【祖娅纳惜·FRE】阿刁_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili.mp3"
     }, {
         id: "229336",
         name: "一个像夏天一个像秋天",
@@ -368,7 +368,7 @@ var musicList = [
         pic_id: "109951168750873662",
         lyric_id: "229336",
         pic: "",
-        url: "http://g.yedii.com/music/一个像夏天一个像秋天-范玮琪.mp3"
+        url: "/music/一个像夏天一个像秋天-范玮琪.mp3"
     }, {
         id: "326990",
         name: "亲爱的,那不是爱情",
@@ -379,7 +379,7 @@ var musicList = [
         pic_id: "109951167379860467",
         lyric_id: "326990",
         pic: "",
-        url: "http://g.yedii.com/music/亲爱的,那不是爱情-张韶涵.mp3"
+        url: "/music/亲爱的,那不是爱情-张韶涵.mp3"
     }, {
         id: "394537",
         name: "低着头",
@@ -390,7 +390,7 @@ var musicList = [
         pic_id: "638816255750145",
         lyric_id: "394537",
         pic: "",
-        url: "http://g.yedii.com/music/低着头-自然卷.mp3"
+        url: "/music/低着头-自然卷.mp3"
     }, {
         id: "368813",
         name: "初恋粉色系 ",
@@ -401,7 +401,7 @@ var musicList = [
         pic_id: "109951163244870797",
         lyric_id: "368813",
         pic: "",
-        url: "http://g.yedii.com/music/初恋粉色系 -南拳妈妈.mp3"
+        url: "/music/初恋粉色系 -南拳妈妈.mp3"
     }, {
         id: "254485",
         name: "勇气",
@@ -412,7 +412,7 @@ var musicList = [
         pic_id: "109951163240604120",
         lyric_id: "254485",
         pic: "",
-        url: "http://g.yedii.com/music/勇气-梁静茹.mp3"
+        url: "/music/勇气-梁静茹.mp3"
     }, {
         id: "1409152181",
         name: "卓别林",
@@ -423,7 +423,7 @@ var musicList = [
         pic_id: "109951164544592419",
         lyric_id: "1409152181",
         pic: "",
-        url: "http://g.yedii.com/music/卓别林-龚芝怡.mp3"
+        url: "/music/卓别林-龚芝怡.mp3"
     }, {
         id: "92305",
         name: "单车恋人",
@@ -434,7 +434,7 @@ var musicList = [
         pic_id: "666304046444415",
         lyric_id: "92305",
         pic: "",
-        url: "http://g.yedii.com/music/单车恋人-后弦.mp3"
+        url: "/music/单车恋人-后弦.mp3"
     }, {
         id: "326719",
         name: "喜欢",
@@ -445,7 +445,7 @@ var musicList = [
         pic_id: "109951168632695603",
         lyric_id: "326719",
         pic: "",
-        url: "http://g.yedii.com/music/喜欢-张悬.mp3"
+        url: "/music/喜欢-张悬.mp3"
     }, {
         id: "28949444",
         name: "喜欢你G.E.M.",
@@ -456,7 +456,7 @@ var musicList = [
         pic_id: "8896148580676276",
         lyric_id: "28949444",
         pic: "",
-        url: "http://g.yedii.com/music/喜欢你-G.E.M.邓紫棋.mp3"
+        url: "/music/喜欢你-G.E.M.邓紫棋.mp3"
     }, {
         id: "394653",
         name: "坐在巷口的那对男女",
@@ -467,7 +467,7 @@ var musicList = [
         pic_id: "78065325584894",
         lyric_id: "394653",
         pic: "",
-        url: "http://g.yedii.com/music/坐在巷口的那对男女-自然卷.mp3"
+        url: "/music/坐在巷口的那对男女-自然卷.mp3"
     }, {
         id: "326738",
         name: "宝贝",
@@ -478,7 +478,7 @@ var musicList = [
         pic_id: "109951167872578215",
         lyric_id: "326738",
         pic: "",
-        url: "http://g.yedii.com/music/宝贝-张悬.mp3"
+        url: "/music/宝贝-张悬.mp3"
     }, {
         id: "421423806",
         name: "小半",
@@ -489,7 +489,7 @@ var musicList = [
         pic_id: "1371091013186741",
         lyric_id: "421423806",
         pic: "",
-        url: "http://g.yedii.com/music/小半-陈粒.mp3"
+        url: "/music/小半-陈粒.mp3"
     }, {
         id: "254146",
         name: "小手拉大手",
@@ -500,7 +500,7 @@ var musicList = [
         pic_id: "109951168144462962",
         lyric_id: "254146",
         pic: "",
-        url: "http://g.yedii.com/music/小手拉大手-梁静茹.mp3"
+        url: "/music/小手拉大手-梁静茹.mp3"
     }, {
         id: "1381755293",
         name: "山楂树之恋",
@@ -511,7 +511,7 @@ var musicList = [
         pic_id: "109951164260611202",
         lyric_id: "1381755293",
         pic: "",
-        url: "http://g.yedii.com/music/山楂树之恋-程佳佳.mp3"
+        url: "/music/山楂树之恋-程佳佳.mp3"
     }, {
         id: "553543175",
         name: "平凡之路",
@@ -522,7 +522,7 @@ var musicList = [
         pic_id: "109951163252275728",
         lyric_id: "553543175",
         pic: "",
-        url: "http://g.yedii.com/music/平凡之路-朴树.mp3"
+        url: "/music/平凡之路-朴树.mp3"
     }, {
         id: "461011",
         name: "恋愛サーキュレーション",
@@ -533,7 +533,7 @@ var musicList = [
         pic_id: "109951166198077552",
         lyric_id: "461011",
         pic: "",
-        url: "http://g.yedii.com/music/恋愛サーキュレーション-花澤香菜.mp3"
+        url: "/music/恋愛サーキュレーション-花澤香菜.mp3"
     }, {
         id: "254059",
         name: "情歌",
@@ -544,7 +544,7 @@ var musicList = [
         pic_id: "109951168163257789",
         lyric_id: "254059",
         pic: "",
-        url: "http://g.yedii.com/music/情歌-梁静茹.mp3"
+        url: "/music/情歌-梁静茹.mp3"
     }, {
         id: "409654891",
         name: "故梦",
@@ -555,7 +555,7 @@ var musicList = [
         pic_id: "109951168638984216",
         lyric_id: "409654891",
         pic: "",
-        url: "http://g.yedii.com/music/故梦-双笙.mp3"
+        url: "/music/故梦-双笙.mp3"
     }, {
         id: "165340",
         name: "有点甜",
@@ -566,7 +566,7 @@ var musicList = [
         pic_id: "109951164176658680",
         lyric_id: "165340",
         pic: "",
-        url: "http://g.yedii.com/music/有点甜-汪苏泷;By2.mp3"
+        url: "/music/有点甜-汪苏泷;By2.mp3"
     }, {
         id: "327736",
         name: "梁山伯与茱丽叶",
@@ -577,7 +577,7 @@ var musicList = [
         pic_id: "109951163423040944",
         lyric_id: "327736",
         pic: "",
-        url: "http://g.yedii.com/music/梁山伯与茱丽叶-卓文萱;曹格.mp3"
+        url: "/music/梁山伯与茱丽叶-卓文萱;曹格.mp3"
     }, {
         id: "1851295915",
         name: "爱久见人心",
@@ -588,7 +588,7 @@ var musicList = [
         pic_id: "109951166753798796",
         lyric_id: "1851295915",
         pic: "",
-        url: "http://g.yedii.com/music/爱久见人心-梁静茹.mp3"
+        url: "/music/爱久见人心-梁静茹.mp3"
     }, {
         id: "233926",
         name: "狠狠哭",
@@ -599,7 +599,7 @@ var musicList = [
         pic_id: "109951164081870241",
         lyric_id: "233926",
         pic: "",
-        url: "http://g.yedii.com/music/狠狠哭-郭采洁.mp3"
+        url: "/music/狠狠哭-郭采洁.mp3"
     }, {
         id: "413829859",
         name: "童话镇",
@@ -610,7 +610,7 @@ var musicList = [
         pic_id: "18345351510075909",
         lyric_id: "413829859",
         pic: "",
-        url: "http://g.yedii.com/music/童话镇-陈一发儿.mp3"
+        url: "/music/童话镇-陈一发儿.mp3"
     }, {
         id: "2054719988",
         name: "说好了不见面",
@@ -621,7 +621,7 @@ var musicList = [
         pic_id: "109951168489987234",
         lyric_id: "2054719988",
         pic: "",
-        url: "http://g.yedii.com/music/说好了不见面-小贱（谭冰尧）.mp3"
+        url: "/music/说好了不见面-小贱（谭冰尧）.mp3"
     }, {
         id: "355992",
         name: "追梦赤子心",
@@ -632,7 +632,7 @@ var musicList = [
         pic_id: "19061133579343591",
         lyric_id: "355992",
         pic: "",
-        url: "http://g.yedii.com/music/追梦赤子心-Gala.mp3"
+        url: "/music/追梦赤子心-Gala.mp3"
     }, {
         id: "454828887",
         name: "遇见",
@@ -643,7 +643,7 @@ var musicList = [
         pic_id: "17687843556430013",
         lyric_id: "454828887",
         pic: "",
-        url: "http://g.yedii.com/music/遇见-孙燕姿.mp3"
+        url: "/music/遇见-孙燕姿.mp3"
     }, {
         id: "327235",
         name: "遗失的美好",
@@ -654,7 +654,7 @@ var musicList = [
         pic_id: "109951167440837785",
         lyric_id: "327235",
         pic: "",
-        url: "http://g.yedii.com/music/遗失的美好-张韶涵.mp3"
+        url: "/music/遗失的美好-张韶涵.mp3"
     }, {
         id: "2a24dea6c74884195fe5b9732fd95ca8",
         name: "小幸运",
