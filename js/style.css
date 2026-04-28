@@ -126,6 +126,55 @@ body {
 .top-bar div a + a { margin-left: 10px; }
 .top-bar > div:last-child { margin-left: auto; }
 
+/* ===== 天气模块 ===== */
+.weather-widget {
+  font-size: 0.75rem;
+  color: var(--accent);
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0 4px;
+  border-radius: 4px;
+  transition: background 0.15s;
+  position: relative;
+}
+.weather-widget:hover { background: var(--tag); }
+.weather-widget:active { opacity: 0.7; }
+
+.weather-popup {
+  display: none;
+  position: fixed;
+  top: 36px;
+  right: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 300;
+  min-width: 200px;
+  padding: 12px 16px;
+  text-align: center;
+  color: var(--text);
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+.weather-popup.show { display: block; }
+.weather-popup a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.75rem;
+  display: inline-block;
+  margin-top: 6px;
+  border-top: 1px solid var(--border);
+  padding-top: 6px;
+  width: 100%;
+}
+.weather-popup a:hover { text-decoration: underline; }
+.weather-popup .w-city { font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
+.weather-popup .w-desc { color: var(--muted); font-size: 0.75rem; }
+.weather-popup .w-loading { color: var(--muted); padding: 8px 0; }
+.weather-popup .w-error { color: #dc3545; }
+
+
 /* ===== 头部 ===== */
 header { text-align: center; padding: 80px 24px 32px; }
 

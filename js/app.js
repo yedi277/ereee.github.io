@@ -248,6 +248,134 @@ if (window.matchMedia) {
 }
 
 /* ================================================================
+   天气模块
+================================================================ */
+
+const weatherWidget = document.getElementById('weatherWidget');
+const weatherPopup  = document.getElementById('weatherPopup');
+const weatherTemp   = document.getElementById('weatherTemp');
+
+// 获取用户 IP 所在城市并查询天气
+function fetchWeather() {
+  weatherTemp.textContent = '…';
+  showWeatherPopup('<div class="w-loading">加载中…</div>');
+
+  fetch('https://wttr.in/?format=j1')
+    .then(r => r.json())
+    .then(data => {
+      const current = data.current_condition[0];
+      const city    = data.nearest_area?.[0]?.areaName?.[0]?.value || '未知';
+      const temp    = current.temp_C + '°C';
+      const desc    = current.weatherDesc?.[0]?.value || '';
+      const icon    = getWeatherEmoji(desc);
+      const feels   = current.FeelsLikeC + '°C';
+      const humidity= current.humidity + '%';
+      const wind    = current.windspeedKmph + ' km/h';
+      const uv      = current.UVIndex;
+      const vis     = current.visibility + ' km';
+      const sunrise = data.weather?.[0]?.astronomy?.[0]?.sunrise || '';
+      const sunset  = data.weather?.[0]?.astronomy?.[0]?.sunset  || '';
+
+      weatherTemp.textContent = icon + ' ' + temp;
+
+      const html = `
+        <div class="w-city">${city}</div>
+        <div style="font-size:2rem;margin:4px 0;">${icon}</div>
+        <div style="font-size:1.2rem;font-weight:600;">${temp}</div>
+        <div class="w-desc">${desc}</div>
+        <div style="margin-top:8px;line-height:1.7;text-align:left;">
+          体感温度&nbsp;&nbsp;${feels}<br>
+          湿度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${humidity}<br>
+          风速&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${wind}<br>
+          能见度&nbsp;&nbsp;&nbsp;${vis}<br>
+          紫外线&nbsp;&nbsp;&nbsp;${uv}<br>
+          日出&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${sunrise}<br>
+          日落&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${sunset}
+        </div>
+        <a href="https://wttr.in/" target="_blank" rel="noopener">查看完整天气 →</a>
+      `;
+      showWeatherPopup(html);
+    })
+    .catch(() => {
+      weatherTemp.textContent = '--°';
+      showWeatherPopup('<div class="w-error">加载失败，请重试</div>');
+    });
+}
+
+function showWeatherPopup(html) {
+  weatherPopup.innerHTML = html;
+  weatherPopup.classList.add('show');
+}
+
+function hideWeatherPopup() {
+  weatherPopup.classList.remove('show');
+}
+
+function getWeatherEmoji(desc) {
+  const d = desc.toLowerCase();
+  if (d.includes('sun') || d.includes('clear'))          return '☀️';
+  if (d.includes('partly'))                                return '⛅';
+  if (d.includes('cloud') && d.includes('overcast'))      return '☁️';
+  if (d.includes('cloud'))                                 return '🌥️';
+  if (d.includes('rain') && d.includes('drizzle'))       return '🌦️';
+  if (d.includes('rain') || d.includes('shower'))         return '🌧️';
+  if (d.includes('thunder') || d.includes('storm'))       return '⛈️';
+  if (d.includes('snow') || d.includes('sleet'))          return '🌨️';
+  if (d.includes('fog') || d.includes('mist'))            return '🌫️';
+  return '🌡️';
+}
+
+// 点击右上角天气 → 弹出/关闭详情
+weatherWidget.addEventListener('click', e => {
+  e.stopPropagation();
+  if (weatherPopup.classList.contains('show')) {
+    hideWeatherPopup();
+  } else {
+    // 已有温度数据则直接显示，否则重新拉取
+    if (weatherTemp.textContent && weatherTemp.textContent !== '--°' && weatherTemp.textContent !== '…') {
+      // 已有缓存，跳过重新拉取，直接显示已有内容
+      if (!weatherPopup.innerHTML || weatherPopup.querySelector('.w-loading')) {
+        fetchWeather();
+      } else {
+        showWeatherPopup(weatherPopup.innerHTML);
+      }
+    } else {
+      fetchWeather();
+    }
+  }
+});
+
+// 点击其他地方关闭
+document.addEventListener('click', e => {
+  if (weatherPopup.classList.contains('show') &&
+      !weatherPopup.contains(e.target) &&
+      !weatherWidget.contains(e.target)) {
+    hideWeatherPopup();
+  }
+});
+
+// ESC 关闭
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && weatherPopup.classList.contains('show')) {
+    hideWeatherPopup();
+  }
+});
+
+// 初始化（延迟加载，不阻塞页面）
+setTimeout(() => {
+  fetch('https://wttr.in/?format=j1')
+    .then(r => r.json())
+    .then(data => {
+      const current = data.current_condition[0];
+      const desc    = current.weatherDesc?.[0]?.value || '';
+      weatherTemp.textContent = getWeatherEmoji(desc) + ' ' + current.temp_C + '°C';
+    })
+    .catch(() => {
+      // 静默失败，保持 --° 显示
+    });
+}, 1500);
+
+/* ================================================================
    图片加载错误处理
 ================================================================ */
 document.addEventListener('DOMContentLoaded', function() {
