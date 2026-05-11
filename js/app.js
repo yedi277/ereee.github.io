@@ -1,5 +1,5 @@
 /* ================================================================
-   个人网址导航 - 主逻辑
+   个人网址导航 - 主逻辑 (v2.0 - 优化交互体验)
 ================================================================ */
 
 // 搜索引擎配置
@@ -16,13 +16,54 @@ let currentEngine = 'baidu';
 let bookmarksLoaded = false;
 let bookmarksPromise = null;
 let currentCat = 'all';
+let searchDebounceTimer = null;
 
 const panel = document.getElementById('bookmarks');
 const searchInput = document.getElementById('search');
 const engineInput = document.getElementById('engine-input');
 
 /* ================================================================
-   搜索功能
+   工具函数
+================================================================ */
+
+// 防抖函数
+function debounce(func, delay) {
+  let timer;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => func.apply(this, args), delay);
+  };
+}
+
+// Toast 提示
+function showToast(message, duration = 2000) {
+  let toast = document.querySelector('.toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.className = 'toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add('show');
+  
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, duration);
+}
+
+// 高亮搜索匹配
+function highlightText(text, query) {
+  if (!query) return text;
+  try {
+    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+    return text.replace(regex, '<mark>$1</mark>');
+  } catch (e) {
+    return text;
+  }
+}
+
+/* ================================================================
+   搜索引擎
 ================================================================ */
 
 function doSearch() {
@@ -35,9 +76,10 @@ function doSearch() {
 // 搜索引擎切换
 document.querySelectorAll('.engine-tabs button').forEach(btn => {
   btn.addEventListener('click', function() {
-    document.querySelector('.engine-tabs .active').classList.remove('active');
+    document.querySelector('.engine-tabs .active')?.classList.remove('active');
     this.classList.add('active');
     currentEngine = this.dataset.engine;
+    showToast(`已切换到：${this.textContent}`);
   });
 });
 
@@ -50,6 +92,11 @@ engineInput.addEventListener('keydown', e => {
    书签加载与渲染
 ================================================================ */
 
+let allBookmarkItems = [];
+const VIRTUAL_SCROLL_THRESHOLD = 100; // 超过100个书签启用虚拟滚动
+let isVirtualScroll = false;
+let virtualScrollContainer = null;
+
 function loadBookmarks() {
   if (bookmarksLoaded) return Promise.resolve();
   if (bookmarksPromise) return bookmarksPromise;
@@ -61,11 +108,16 @@ function loadBookmarks() {
     script.src = 'js/bookmarks.js';
     script.onload = () => {
       bookmarksLoaded = true;
+      // 扁平化所有书签
+      allBookmarkItems = bookmarks.flatMap(b => 
+        (b.items || []).map(item => ({ ...item, cat: b.cat, icon: b.icon }))
+      );
       initCategoryBar();
       resolve();
     };
     script.onerror = () => {
       panel.innerHTML = '<div style="padding:12px;color:#dc3545;">加载失败</div>';
+      showToast('书签加载失败，请刷新重试');
     };
     document.head.appendChild(script);
   });
@@ -99,23 +151,113 @@ function initCategoryBar() {
   });
 }
 
-function renderBookmarks() {
-  const items = currentCat === 'all' 
-    ? bookmarks.flatMap(b => b.items)
-    : bookmarks.find(b => b.cat === currentCat)?.items || [];
+function renderBookmarks(query = '') {
+  let items = currentCat === 'all' 
+    ? allBookmarkItems
+    : allBookmarkItems.filter(item => item.cat === currentCat);
   
-  panel.innerHTML = items.map(([name, url, icon]) => `
-    <a class="card" href="${url}" target="_blank" rel="noopener" data-name="${name}" data-url="${url}">
-      <span class="icon">${renderIcon(icon)}</span>
-      <span class="name">${name}</span>
-    </a>
-  `).join('');
+  // 搜索过滤
+  if (query) {
+    const q = query.toLowerCase();
+    items = items.filter(item => 
+      (item.name || '').toLowerCase().includes(q) || 
+      (item.url || '').toLowerCase().includes(q)
+    );
+  }
+  
+  if (items.length === 0) {
+    panel.innerHTML = '<div style="padding:20px;color:var(--muted);text-align:center;width:100%;">暂无书签，<a href="/sq.html" style="color:var(--accent);">去添加</a></div>';
+    return;
+  }
+  
+  // 超过阈值使用虚拟滚动
+  if (items.length > VIRTUAL_SCROLL_THRESHOLD) {
+    initVirtualScroll(items, query);
+  } else {
+    renderDirectly(items, query);
+  }
+}
+
+// 直接渲染（少量书签）
+function renderDirectly(items, query) {
+  isVirtualScroll = false;
+  panel.style.overflowY = 'auto';
+  panel.style.height = 'auto';
+  
+  panel.innerHTML = items.map((item, idx) => {
+    const [name, url, icon] = Array.isArray(item) ? item : [item.name, item.url, item.icon];
+    const highlightedName = highlightText(name || '', query);
+    return `
+      <a class="card" href="${url}" target="_blank" rel="noopener" data-name="${name}" data-url="${url}" loading="lazy">
+        <span class="icon">${renderIcon(icon)}</span>
+        <span class="name">${highlightedName}</span>
+      </a>
+    `;
+  }).join('');
+}
+
+// 虚拟滚动（大量书签）
+function initVirtualScroll(items, query) {
+  isVirtualScroll = true;
+  const ITEM_HEIGHT = 32;
+  const CONTAINER_HEIGHT = 400;
+  const visibleCount = Math.ceil(CONTAINER_HEIGHT / ITEM_HEIGHT) + 5;
+  
+  panel.style.height = CONTAINER_HEIGHT + 'px';
+  panel.style.overflowY = 'auto';
+  panel.style.position = 'relative';
+  
+  const totalHeight = items.length * ITEM_HEIGHT;
+  const spacer = document.createElement('div');
+  spacer.style.height = totalHeight + 'px';
+  spacer.style.position = 'relative';
+  
+  panel.innerHTML = '';
+  panel.appendChild(spacer);
+  
+  function renderVisible() {
+    const scrollTop = panel.scrollTop;
+    const startIdx = Math.floor(scrollTop / ITEM_HEIGHT);
+    const endIdx = Math.min(startIdx + visibleCount, items.length);
+    
+    // 移除旧节点
+    const oldCards = panel.querySelectorAll('.card');
+    oldCards.forEach(card => card.remove());
+    
+    // 渲染可见区域
+    for (let i = startIdx; i < endIdx; i++) {
+      const item = items[i];
+      const [name, url, icon] = Array.isArray(item) ? item : [item.name, item.url, item.icon];
+      const highlightedName = highlightText(name || '', query);
+      
+      const card = document.createElement('a');
+      card.className = 'card';
+      card.href = url;
+      card.target = '_blank';
+      card.rel = 'noopener';
+      card.dataset.name = name;
+      card.dataset.url = url;
+      card.style.position = 'absolute';
+      card.style.top = (i * ITEM_HEIGHT) + 'px';
+      card.style.width = '30%';
+      card.style.height = ITEM_HEIGHT + 'px';
+      card.innerHTML = `
+        <span class="icon">${renderIcon(icon)}</span>
+        <span class="name">${highlightedName}</span>
+      `;
+      
+      spacer.appendChild(card);
+    }
+  }
+  
+  panel.addEventListener('scroll', renderVisible);
+  renderVisible();
 }
 
 function renderIcon(icon) {
   if (!icon) return '🔗';
   if (icon.startsWith('data:image') || icon.startsWith('http')) {
-    return `<img src="${icon}" style="width:16px;height:16px;object-fit:contain;">`;
+    return `<img src="${icon}" loading="lazy" style="width:16px;height:16px;object-fit:contain;" alt="" onerror="this.style.display='none'">`;
   }
   return icon;
 }
@@ -138,12 +280,18 @@ function filterByCat(cat) {
     panel.classList.remove('hidden');
     panel.classList.add('show');
     renderBookmarks();
+    
+    // 显示当前分类
+    if (cat !== 'all') {
+      const catName = bookmarks.find(b => b.cat === cat)?.cat || cat;
+      showToast(`分类：${catName}`);
+    }
   });
 }
 
 function closePanel() {
   panel.classList.remove('show');
-  panel.classList.add('hidden');
+  setTimeout(() => panel.classList.add('hidden'), 250);
 }
 
 function toggleBookmarks() {
@@ -157,21 +305,23 @@ function toggleBookmarks() {
 }
 
 /* ================================================================
-   搜索过滤
+   搜索过滤（带防抖）
 ================================================================ */
 
-searchInput.addEventListener('input', function() {
-  const query = this.value.toLowerCase().trim();
-  
+const debouncedSearch = debounce(function(query) {
   if (!query) {
-    document.querySelectorAll('.card').forEach(c => c.style.display = '');
+    document.querySelectorAll('.card').forEach(c => {
+      c.style.display = '';
+      const nameSpan = c.querySelector('.name');
+      if (nameSpan) nameSpan.innerHTML = nameSpan.textContent;
+    });
     return;
   }
   
   loadBookmarks().then(() => {
     currentCat = 'all';
     panel.classList.add('show');
-    renderBookmarks();
+    renderBookmarks(query);
     
     requestAnimationFrame(() => {
       document.querySelectorAll('.card').forEach(card => {
@@ -181,6 +331,11 @@ searchInput.addEventListener('input', function() {
       });
     });
   });
+}, 300);
+
+searchInput.addEventListener('input', function() {
+  const query = this.value.toLowerCase().trim();
+  debouncedSearch(query);
 });
 
 searchInput.addEventListener('keydown', e => {
@@ -219,6 +374,7 @@ function applyTheme(dark) {
   darkToggle.textContent = dark ? '☀️' : '🌙';
   darkToggle.setAttribute('title', dark ? '切换亮色模式' : '切换暗色模式');
   localStorage.setItem('theme', dark ? 'dark' : 'light');
+  showToast(dark ? '已切换至暗色模式' : '已切换至亮色模式', 1500);
 }
 
 darkToggle.addEventListener('click', () => {
@@ -333,7 +489,6 @@ weatherWidget.addEventListener('click', e => {
   } else {
     // 已有温度数据则直接显示，否则重新拉取
     if (weatherTemp.textContent && weatherTemp.textContent !== '--°' && weatherTemp.textContent !== '…') {
-      // 已有缓存，跳过重新拉取，直接显示已有内容
       if (!weatherPopup.innerHTML || weatherPopup.querySelector('.w-loading')) {
         fetchWeather();
       } else {
@@ -386,3 +541,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }, true);
 });
 
+/* ================================================================
+   页面加载完成提示
+================================================================ */
+window.addEventListener('load', function() {
+  console.log('✅ 个人网址导航 v2.0 加载完成');
+});
