@@ -6,11 +6,16 @@
 <meta name="description" content="个人网址导航 - 快速访问常用网站，支持搜索、分类导航">
 <meta name="keywords" content="网址导航,书签,快速导航,常用网站">
 <meta name="theme-color" content="#7a6a52">
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta property="og:title" content="个人网址导航">
+<meta property="og:description" content="快速访问常用网站，支持搜索、分类导航">
+<meta property="og:type" content="website">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>个人网址导航</title>
 <link rel="stylesheet" href="js/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🔗</text></svg>">
+<link rel="preconnect" href="https://wttr.in">
+<link rel="dns-prefetch" href="https://wttr.in">
 </head>
 <body>
 
@@ -26,7 +31,7 @@
   <div class="quick-links-top">
     <a href="/music.html" target="_blank" rel="noopener noreferrer" title="音乐">🎵</a>
     <a href="/y" target="_blank" rel="noopener noreferrer" title="音乐">🎧</a>
-    <a href="https://ereee.cc/pan" target="_blank" rel="noopener noreferrer" title="个人网盘">💾</a>
+    <a href="/pan" target="_blank" rel="noopener noreferrer" title="个人网盘">💾</a>
     <a href="/z.html" target="_blank" rel="noopener noreferrer" title="Z">™</a>
   </div>
   <div class="weather-popup" id="weatherPopup"></div>
@@ -135,17 +140,6 @@
 </footer>
 
 <script src="js/base64.js"></script>
-<script defer src="js/bookmarks.js"></script>
 <script defer src="js/app.js"></script>
-<script>
-// 注册 Service Worker
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => console.log('✅ SW 注册成功:', reg.scope))
-      .catch(err => console.log('❌ SW 注册失败:', err));
-  });
-}
-</script>
 </body>
 </html>

@@ -22,6 +22,19 @@ const searchInput = document.getElementById('search');
 const engineInput = document.getElementById('engine-input');
 
 /* ================================================================
+   工具函数
+================================================================ */
+
+// 防抖函数：延迟执行，避免频繁触发
+function debounce(fn, delay = 250) {
+  let timer;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
+/* ================================================================
    搜索功能
 ================================================================ */
 
@@ -75,12 +88,24 @@ function loadBookmarks() {
 
 
 
-function renderIcon(icon) {
-  if (!icon) return '🔗';
-  if (icon.startsWith('data:image') || icon.startsWith('http')) {
-    return `<img src="${icon}" style="width:16px;height:16px;object-fit:contain;" alt="" loading="lazy">`;
+// 动态生成 favicon（使用 Google Favicon 服务）
+function renderIcon(url, fallbackIcon) {
+  // 如果有 emoji 图标，优先使用
+  if (fallbackIcon && !fallbackIcon.startsWith('data:image')) {
+    return fallbackIcon;
   }
-  return icon;
+  
+  // 从 URL 提取域名，使用 Google Favicon 服务
+  try {
+    const domain = new URL(url).hostname;
+    return `<img src="https://www.google.com/s2/favicons?domain=${domain}&sz=32" 
+                style="width:16px;height:16px;object-fit:contain;" 
+                alt="" 
+                loading="lazy"
+                onerror="this.onerror=null;this.style.display='none';">`;
+  } catch(e) {
+    return fallbackIcon || '🔗';
+  }
 }
 function renderBookmarks() {
   const items = currentCat === 'all' 
@@ -89,7 +114,7 @@ function renderBookmarks() {
   
   panel.innerHTML = items.map(([name, url, icon]) => `
     <a class="card" href="${url}" target="_blank" rel="noopener" data-name="${name}" data-url="${url}">
-      <span class="icon">${renderIcon(icon)}</span>
+      <span class="icon">${renderIcon(url, icon)}</span>
       <span class="name">${name}</span>
     </a>
   `).join('');
@@ -167,7 +192,8 @@ function toggleBookmarks() {
    搜索过滤
 ================================================================ */
 
-searchInput.addEventListener('input', function() {
+// 搜索过滤（使用防抖优化性能）
+const handleSearch = debounce(function() {
   const query = this.value.toLowerCase().trim();
   
   if (!query) {
@@ -188,7 +214,9 @@ searchInput.addEventListener('input', function() {
       });
     });
   });
-});
+}, 250);
+
+searchInput.addEventListener('input', handleSearch);
 
 searchInput.addEventListener('keydown', e => {
   if (e.key === 'Escape') {

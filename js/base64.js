@@ -44,15 +44,6 @@ const quickLinksIcons = {
   var icons = quickLinksIcons;
   document.querySelectorAll(".ql-icon").forEach(function(img) {
     var name = img.getAttribute("data-name");
-    if (icons[name]) {
-      img.src = icons[name];
-    }
-  });
-})();
-(function() {
-  var icons = quickLinksIcons;
-  document.querySelectorAll(".ql-icon").forEach(function(img) {
-    var name = img.getAttribute("data-name");
     if (icons[name]) img.src = icons[name];
   });
 })();

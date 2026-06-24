@@ -1,0 +1,8 @@
+# Cloudflare Pages 路由规则
+# 将 /api 请求代理到 Cloudflare Worker
+
+# 注意：以下规则需要 Cloudflare Pages Functions 支持
+# 如果你的 Worker 部署在独立域名，在 player.js 中设置 mkPlayer.api 为完整 URL
+
+/api/*  https://your-worker.your-subdomain.workers.dev/api/:splat  200
+/get    https://your-worker.your-subdomain.workers.dev/get         200
