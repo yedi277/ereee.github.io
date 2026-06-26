@@ -116,6 +116,7 @@ body {
   border: none; background: transparent;
   font-size: 0.75rem; outline: none;
   width: 80px;
+  color: var(--text);
   transition: width 0.2s;
 }
 .top-bar .search input::placeholder { color: var(--muted); }
@@ -250,7 +251,7 @@ h1 {
 .engine-input input {
   width: 100%; padding: 14px 56px 14px 20px;
   border: 1.5px solid var(--border); border-radius: 40px;
-  background: var(--card); font-size: 0.95rem; outline: none;
+  background: var(--card); color: var(--text); font-size: 0.95rem; outline: none;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 .engine-input input:focus { border-color: var(--accent2); box-shadow: 0 0 0 3px rgba(181,164,138,0.15); }
